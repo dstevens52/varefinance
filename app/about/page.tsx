@@ -62,7 +62,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Transparency',
-                body: 'We are clear about what Varefinance.com is: an educational lead generation site. When you reach out, you may be contacted by VA-approved lenders. We do not hide this or pretend otherwise.',
+                body: 'We are clear about what VARefinance.com is: a free educational resource for veterans. No hidden agendas, no sales pitches. Just honest information to help you make informed decisions.',
               },
             ].map(v => (
               <div key={v.title} className="bg-white border border-gray-200 rounded-xl p-6">
@@ -119,7 +119,7 @@ export default function AboutPage() {
       <section className="bg-navy-800 py-14 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Learn More?</h2>
-          <p className="text-white/70 text-lg mb-8">Explore our guides on VA refinancing or reach out to talk to a VA loan specialist.</p>
+          <p className="text-white/70 text-lg mb-8">Explore our guides on VA refinancing programs and educational articles for veterans.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/blog" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
               Read Our Guides
