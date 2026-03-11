@@ -8,9 +8,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-baseline gap-0 mb-3">
-              <span className="font-bold text-lg text-gold-400 tracking-tight">VARE</span>
-              <span className="font-semibold text-lg text-white tracking-tight">finance</span>
-              <span className="text-sm font-medium text-white/50 tracking-tight">.com</span>
+              <span className="font-bold text-lg text-gold-400 tracking-tight">VA</span>
+              <span className="font-semibold text-lg text-white tracking-tight">REfinance.com</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               You served your country. Now let your VA loan serve you.

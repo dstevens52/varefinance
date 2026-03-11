@@ -22,9 +22,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-baseline gap-0 shrink-0">
-            <span className="font-bold text-xl text-gold-400 tracking-tight">VARE</span>
-            <span className="font-semibold text-xl text-white tracking-tight">finance</span>
-            <span className="text-sm font-medium text-white/50 tracking-tight">.com</span>
+            <span className="font-bold text-xl text-gold-400 tracking-tight">VA</span>
+            <span className="font-semibold text-xl text-white tracking-tight">REfinance.com</span>
           </Link>
 
           {/* Desktop Nav */}
