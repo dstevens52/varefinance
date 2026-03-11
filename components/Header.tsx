@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/va-irrrl', label: 'VA Streamline' },
   { href: '/va-cash-out', label: 'VA Cash-Out' },
   { href: '/va-purchase', label: 'VA Purchase' },
+  { href: '/calculator', label: 'Calculator' },
   { href: '/blog', label: 'Learn' },
   { href: '/about', label: 'About' },
 ]

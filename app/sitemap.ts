@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/va-irrrl`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/va-cash-out`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/va-purchase`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/calculator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
 { url: `${base}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
   ]
