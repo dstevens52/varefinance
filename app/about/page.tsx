@@ -40,7 +40,7 @@ export default function AboutPage() {
               The VA loan benefit is one of the most valuable pieces of compensation earned through military service. Our mission is straightforward: give veterans the clear, honest, jargon-free information they need to understand their refinancing options and make confident decisions.
             </p>
             <p>
-              We do not originate loans. We are not a lender or broker. We are an educational platform that connects informed veterans with qualified VA-approved lenders who can help them act on what they have learned.
+              We do not originate loans. We are not a lender or broker. We are an educational platform — no sales, no pressure, just the facts you need to make confident decisions.
             </p>
           </div>
         </div>
