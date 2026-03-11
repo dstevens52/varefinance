@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-baseline gap-0 mb-3">
               <span className="font-bold text-lg text-gold-400 tracking-tight">VA</span>
-              <span className="font-semibold text-lg text-white tracking-tight">REfinance.com</span>
+              <span className="font-semibold text-lg text-white tracking-tight">Refinance.com</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               You served your country. Now let your VA loan serve you.

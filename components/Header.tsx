@@ -23,7 +23,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-baseline gap-0 shrink-0">
             <span className="font-bold text-xl text-gold-400 tracking-tight">VA</span>
-            <span className="font-semibold text-xl text-white tracking-tight">REfinance.com</span>
+            <span className="font-semibold text-xl text-white tracking-tight">Refinance.com</span>
           </Link>
 
           {/* Desktop Nav */}
