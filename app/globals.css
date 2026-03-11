@@ -90,6 +90,41 @@ body {
   text-decoration: underline;
 }
 
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose thead {
+  background-color: #1b3a6b;
+  color: #ffffff;
+}
+
+.prose th {
+  padding: 0.625rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.prose td {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.prose tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.prose tbody tr:hover {
+  background-color: #f0f4fb;
+}
+
 .prose blockquote {
   border-left: 4px solid #c8a032;
   padding-left: 1rem;
