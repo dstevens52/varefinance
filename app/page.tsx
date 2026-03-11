@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
   title: 'VA Loan Refinancing for Veterans & Military Families',
@@ -42,17 +41,17 @@ const trustPoints = [
   {
     icon: '📖',
     title: 'Education First',
-    body: 'We believe informed veterans make better decisions. Our goal is to explain your options clearly — never to pressure or confuse.',
+    body: 'We believe informed veterans make better decisions. Our goal is to explain your options clearly — with no pressure and no sales tactics.',
   },
   {
-    icon: '🔒',
-    title: 'No Obligation',
-    body: 'Reaching out is free and commits you to nothing. We connect you with VA loan specialists who understand military life.',
+    icon: '✅',
+    title: 'Accurate & Up to Date',
+    body: 'Our guides reflect current VA rules and program requirements so you can rely on the information when evaluating your options.',
   },
   {
     icon: '⚡',
-    title: 'Fast & Straightforward',
-    body: 'VA loans are designed to move quickly. With proper guidance, many veterans close in 30 days or less.',
+    title: 'Clear & Straightforward',
+    body: 'No jargon, no fine print. We explain VA loan programs in plain language so you can understand your options without needing a mortgage degree.',
   },
 ]
 
@@ -71,20 +70,20 @@ export default function HomePage() {
             <span className="text-gold-400">Now let your VA loan serve you.</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Millions of veterans are leaving money on the table by not refinancing their VA loans. Find out how much you could save — with no pressure and no obligation.
+            Millions of veterans are leaving money on the table by not refinancing their VA loans. Learn how VA refinancing works — and whether it could save you money.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/va-irrrl"
               className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
             >
-              Get a Free Consultation
+              Explore VA Streamline Refinance
             </Link>
             <Link
-              href="/va-irrrl"
+              href="/va-cash-out"
               className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
             >
-              Learn About VA IRRRL
+              Explore VA Cash-Out Refinance
             </Link>
           </div>
         </div>
@@ -157,7 +156,7 @@ export default function HomePage() {
       {/* Trust signals */}
       <section className="bg-navy-900 py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">Why Veterans Trust Varefinance.com</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">Why Veterans Trust VARefinance.com</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustPoints.map(tp => (
               <div key={tp.title} className="bg-white/5 border border-white/10 rounded-xl p-6">
@@ -192,17 +191,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Lead form CTA */}
-      <section className="bg-navy-800 py-16 px-4" id="get-started">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-3">See What You Could Save</h2>
-            <p className="text-white/70 text-lg">
-              Fill out the short form below and a VA loan specialist will reach out to discuss your options.
-            </p>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <LeadForm />
+      {/* Educational CTA */}
+      <section className="bg-navy-800 py-16 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Start with the Basics</h2>
+          <p className="text-white/70 text-lg mb-8">
+            Not sure which program applies to you? Our guides explain everything in plain language — from eligibility rules to real savings examples.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/blog" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
+              Browse All Articles
+            </Link>
+            <Link href="/va-irrrl" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
+              Learn About VA IRRRL
+            </Link>
           </div>
         </div>
       </section>

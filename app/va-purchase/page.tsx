@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
-import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
   title: 'VA Home Purchase Loan — Buy a Home With No Down Payment',
@@ -48,8 +47,8 @@ export default function VAPurchasePage() {
           <p className="text-white/70 text-xl max-w-2xl leading-relaxed mb-8">
             Your military service earns you one of the most powerful home-buying tools available. VA purchase loans offer $0 down, no PMI, and rates that consistently beat the market.
           </p>
-          <Link href="#get-started" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
-            Talk to a VA Loan Specialist
+          <Link href="#how-it-works" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
+            See How the Process Works
           </Link>
         </div>
       </section>
@@ -106,7 +105,7 @@ export default function VAPurchasePage() {
       </section>
 
       {/* How process works */}
-      <section className="bg-white py-16 px-4">
+      <section id="how-it-works" className="bg-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-navy-900 mb-8">The VA Purchase Process</h2>
           <div className="space-y-5">
@@ -151,15 +150,20 @@ export default function VAPurchasePage() {
         </div>
       </section>
 
-      {/* Lead form */}
-      <section id="get-started" className="bg-navy-800 py-16 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-3">Ready to Use Your VA Benefit?</h2>
-            <p className="text-white/70 text-lg">A VA loan specialist will reach out to walk you through your options.</p>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <LeadForm defaultLoanType="VA Home Purchase" />
+      {/* Educational CTA */}
+      <section className="bg-navy-800 py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">Also Explore VA Refinancing Options</h2>
+          <p className="text-white/70 mb-7">
+            Already own a home with a VA loan? Learn how to lower your rate or access your equity through VA refinancing programs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/va-irrrl" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              VA Streamline Refinance
+            </Link>
+            <Link href="/va-cash-out" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              VA Cash-Out Refinance
+            </Link>
           </div>
         </div>
       </section>

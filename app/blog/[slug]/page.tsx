@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '@/lib/blog'
-import LeadForm from '@/components/LeadForm'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -65,34 +64,51 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
 
-            {/* Bottom CTA */}
+            {/* Bottom educational CTA */}
             <div className="mt-12 p-6 bg-navy-50 border border-navy-100 rounded-2xl">
-              <h3 className="font-bold text-navy-900 text-lg mb-2">Ready to put this knowledge to work?</h3>
-              <p className="text-gray-600 text-sm mb-4">A VA loan specialist can review your specific situation and tell you exactly what you could save.</p>
-              <Link href="/contact" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-6 py-2.5 rounded-md transition-colors text-sm">
-                Get a Free Consultation
-              </Link>
+              <h3 className="font-bold text-navy-900 text-lg mb-2">Want to learn more about your VA loan options?</h3>
+              <p className="text-gray-600 text-sm mb-4">Explore our in-depth guides on VA refinancing programs to understand your eligibility and potential savings.</p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/va-irrrl" className="inline-block bg-navy-800 hover:bg-navy-900 text-white font-semibold px-5 py-2 rounded-md transition-colors text-sm">
+                  VA Streamline Refinance
+                </Link>
+                <Link href="/va-cash-out" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-5 py-2 rounded-md transition-colors text-sm">
+                  VA Cash-Out Refinance
+                </Link>
+              </div>
             </div>
           </article>
 
           {/* Sidebar */}
           <aside className="space-y-6">
-            {/* Mini lead form */}
+            {/* Explore programs */}
             <div className="bg-navy-900 rounded-2xl p-6">
-              <h3 className="font-bold text-white mb-1">See What You Could Save</h3>
-              <p className="text-white/60 text-sm mb-4">No obligation. A specialist will reach out within 1 business day.</p>
-              <Link href="/contact" className="block text-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-5 py-2.5 rounded-md transition-colors text-sm">
-                Get Started Free
-              </Link>
+              <h3 className="font-bold text-white mb-3">Explore VA Loan Programs</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/va-irrrl" className="block text-white/80 hover:text-gold-400 text-sm transition-colors">
+                    → VA Streamline Refinance (IRRRL)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/va-cash-out" className="block text-white/80 hover:text-gold-400 text-sm transition-colors">
+                    → VA Cash-Out Refinance
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/va-purchase" className="block text-white/80 hover:text-gold-400 text-sm transition-colors">
+                    → VA Home Purchase Loan
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             {/* Quick links */}
             <div className="border border-gray-200 rounded-xl p-5">
-              <h3 className="font-semibold text-navy-900 mb-4 text-sm uppercase tracking-wider">Explore Loan Types</h3>
+              <h3 className="font-semibold text-navy-900 mb-4 text-sm uppercase tracking-wider">On This Site</h3>
               <ul className="space-y-2">
-                <li><Link href="/va-irrrl" className="text-navy-700 hover:text-gold-600 text-sm transition-colors">VA Streamline Refinance (IRRRL)</Link></li>
-                <li><Link href="/va-cash-out" className="text-navy-700 hover:text-gold-600 text-sm transition-colors">VA Cash-Out Refinance</Link></li>
-                <li><Link href="/va-purchase" className="text-navy-700 hover:text-gold-600 text-sm transition-colors">VA Home Purchase Loan</Link></li>
+                <li><Link href="/blog" className="text-navy-700 hover:text-gold-600 text-sm transition-colors">All Articles &amp; Guides</Link></li>
+                <li><Link href="/about" className="text-navy-700 hover:text-gold-600 text-sm transition-colors">About VARefinance.com</Link></li>
               </ul>
             </div>
 
@@ -115,16 +131,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* Full lead form at bottom */}
-      <section className="bg-navy-800 py-16 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-3">Take the Next Step</h2>
-            <p className="text-white/70">Connect with a VA loan specialist who can help you act on what you&apos;ve learned.</p>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <LeadForm />
-          </div>
+      {/* Bottom educational CTA banner */}
+      <section className="bg-navy-800 py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">Keep Learning About VA Loan Benefits</h2>
+          <p className="text-white/70 mb-7">
+            VA refinancing programs have helped millions of veterans lower their costs. Browse our full library of guides and educational articles.
+          </p>
+          <Link href="/blog" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+            Browse All Articles
+          </Link>
         </div>
       </section>
     </>

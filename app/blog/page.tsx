@@ -68,10 +68,15 @@ export default function BlogPage() {
       <section className="bg-navy-50 py-10 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-navy-900 mb-3">Ready to Take Action?</h2>
-          <p className="text-gray-600 mb-6">Reading is a great start. The next step is a no-obligation conversation with a VA loan specialist.</p>
-          <Link href="/contact" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
-            Get a Free Consultation
-          </Link>
+          <p className="text-gray-600 mb-6">Ready to put your knowledge into action? Explore the VA loan programs that may apply to your situation.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/va-irrrl" className="inline-block bg-navy-800 hover:bg-navy-900 text-white font-semibold px-6 py-3 rounded-md transition-colors">
+              VA Streamline Refinance
+            </Link>
+            <Link href="/va-cash-out" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-6 py-3 rounded-md transition-colors">
+              VA Cash-Out Refinance
+            </Link>
+          </div>
         </div>
       </section>
     </>

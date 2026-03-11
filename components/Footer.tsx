@@ -15,7 +15,7 @@ export default function Footer() {
               You served your country. Now let your VA loan serve you.
             </p>
             <p className="text-white/40 text-xs mt-4 leading-relaxed">
-              Varefinance.com is an educational resource for veterans and military families. We do not originate loans.
+              Varefinance.com is an independent educational resource for veterans and military families. We do not originate loans.
             </p>
           </div>
 
@@ -41,18 +41,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CTA */}
+          {/* More articles */}
           <div>
-            <h3 className="font-semibold text-sm text-white/90 uppercase tracking-widest mb-4">Get Started</h3>
-            <p className="text-white/60 text-sm mb-4">
-              Find out if refinancing could lower your rate and save you money.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors"
-            >
-              Free Consultation
-            </Link>
+            <h3 className="font-semibold text-sm text-white/90 uppercase tracking-widest mb-4">More Articles</h3>
+            <ul className="space-y-2">
+              <li><Link href="/blog/va-loan-refinance-waiting-period" className="text-white/60 hover:text-white text-sm transition-colors">VA Refinance Waiting Period</Link></li>
+              <li><Link href="/blog/va-irrrl-vs-conventional-refinance" className="text-white/60 hover:text-white text-sm transition-colors">IRRRL vs Conventional Refinance</Link></li>
+              <li><Link href="/blog/type-1-vs-type-2-va-cash-out-refinance" className="text-white/60 hover:text-white text-sm transition-colors">Type I vs Type II Cash-Out</Link></li>
+              <li><Link href="/blog/how-to-spot-predatory-va-refinance-offers" className="text-white/60 hover:text-white text-sm transition-colors">Spotting Predatory Offers</Link></li>
+            </ul>
           </div>
         </div>
 

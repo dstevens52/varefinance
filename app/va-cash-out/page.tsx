@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
-import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
   title: 'VA Cash-Out Refinance — Tap Your Home Equity',
@@ -73,11 +72,11 @@ export default function VACashOutPage() {
             Your home equity is one of your most valuable financial assets. A VA Cash-Out Refinance lets eligible veterans access up to 100% of their home&apos;s value — at competitive VA rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#get-started" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
-              Check My Eligibility
+            <Link href="#how-it-works" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
+              See How It Works
             </Link>
-            <Link href="#how-it-works" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
-              How It Works
+            <Link href="/blog/va-cash-out-tap-into-equity" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
+              Read Our Cash-Out Guide
             </Link>
           </div>
         </div>
@@ -233,15 +232,20 @@ export default function VACashOutPage() {
         </div>
       </section>
 
-      {/* Lead form */}
-      <section id="get-started" className="bg-navy-800 py-16 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-3">Find Out How Much Equity You Can Access</h2>
-            <p className="text-white/70 text-lg">A VA loan specialist will review your situation and reach out within one business day.</p>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <LeadForm defaultLoanType="VA Cash-Out Refinance" />
+      {/* Educational CTA */}
+      <section className="bg-navy-800 py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">Learn More About VA Cash-Out Refinancing</h2>
+          <p className="text-white/70 mb-7">
+            Our in-depth guide covers how the cash-out process works, how to calculate whether the costs make sense, and the difference between Type I and Type II transactions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/blog/va-cash-out-tap-into-equity" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              Read the Full Cash-Out Guide
+            </Link>
+            <Link href="/blog/type-1-vs-type-2-va-cash-out-refinance" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              Type I vs Type II Explained
+            </Link>
           </div>
         </div>
       </section>

@@ -41,12 +41,6 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors"
-            >
-              Get Started
-            </Link>
           </nav>
 
           {/* Mobile hamburger */}
@@ -84,13 +78,6 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-4 py-2 rounded-md text-center transition-colors"
-            >
-              Get Started Free
-            </Link>
           </div>
         </div>
       )}

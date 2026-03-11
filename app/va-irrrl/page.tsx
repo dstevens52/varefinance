@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
-import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
   title: 'VA Streamline Refinance (VA IRRRL) — Lower Your Rate Fast',
@@ -93,11 +92,11 @@ export default function VAIRRRLPage() {
             The fastest, simplest way for veterans with existing VA loans to lower their interest rate — often with no appraisal, no income verification, and no out-of-pocket costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#get-started" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
-              Check My Eligibility
+            <Link href="#how-it-works" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
+              See How It Works
             </Link>
-            <Link href="#how-it-works" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
-              How It Works
+            <Link href="/blog/what-is-va-irrrl" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
+              Read Our IRRRL Guide
             </Link>
           </div>
         </div>
@@ -219,15 +218,20 @@ export default function VAIRRRLPage() {
         </div>
       </section>
 
-      {/* Lead form */}
-      <section id="get-started" className="bg-navy-800 py-16 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-3">Ready to Lower Your Rate?</h2>
-            <p className="text-white/70 text-lg">A VA loan specialist will review your situation and reach out within one business day.</p>
-          </div>
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <LeadForm defaultLoanType="VA IRRRL (Streamline Refinance)" />
+      {/* Educational CTA */}
+      <section className="bg-navy-800 py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">Want to Go Deeper?</h2>
+          <p className="text-white/70 mb-7">
+            Read our full guide on the VA IRRRL — including real savings examples, a break-even calculator walkthrough, and common mistakes to avoid.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/blog/what-is-va-irrrl" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              Read the Full IRRRL Guide
+            </Link>
+            <Link href="/blog" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3 rounded-md transition-colors">
+              Browse All Articles
+            </Link>
           </div>
         </div>
       </section>

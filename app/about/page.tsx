@@ -118,8 +118,8 @@ export default function AboutPage() {
             <Link href="/blog" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
               Read Our Guides
             </Link>
-            <Link href="/contact" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
-              Get a Free Consultation
+            <Link href="/va-irrrl" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
+              Explore VA Loan Programs
             </Link>
           </div>
         </div>
