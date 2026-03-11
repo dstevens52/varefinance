@@ -41,7 +41,6 @@ const inputClass = 'w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm
 
 export default function LeadForm({ defaultLoanType = '' }: { defaultLoanType?: string }) {
   const [form, setForm] = useState<FormData>({ ...initialForm, loanType: defaultLoanType })
-  const [tcpa, setTcpa] = useState(false)
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
@@ -186,26 +185,14 @@ export default function LeadForm({ defaultLoanType = '' }: { defaultLoanType?: s
         </div>
       )}
 
-      {/* TCPA checkbox */}
-      <div className="flex items-start gap-3 pt-1">
-        <input
-          id="tcpa" type="checkbox" required
-          checked={tcpa} onChange={e => setTcpa(e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-navy-800 focus:ring-navy-700 shrink-0"
-        />
-        <label htmlFor="tcpa" className="text-xs text-gray-600 leading-relaxed">
-          I agree to the terms below
-        </label>
-      </div>
-
       {status === 'error' && (
         <p className="text-red-600 text-sm">{errorMsg}</p>
       )}
 
       <button
         type="submit"
-        disabled={status === 'submitting' || !tcpa}
-        className="w-full bg-gold-500 hover:bg-gold-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-md transition-colors text-base"
+        disabled={status === 'submitting'}
+        className="w-full bg-gold-500 hover:bg-gold-600 disabled:opacity-60 text-white font-semibold py-3 rounded-md transition-colors text-base"
       >
         {status === 'submitting' ? 'Sending...' : 'Get My Free Consultation'}
       </button>
