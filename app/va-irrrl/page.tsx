@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
+import JsonLd from '@/components/JsonLd'
+import { faqSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'VA Streamline Refinance (VA IRRRL) — Lower Your Rate Fast',
@@ -78,6 +80,13 @@ const faqs = [
 export default function VAIRRRLPage() {
   return (
     <>
+      <JsonLd data={[
+        faqSchema(faqs),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'VA Streamline Refinance (IRRRL)', path: '/va-irrrl' },
+        ]),
+      ]} />
       {/* Hero */}
       <section className="bg-navy-900 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto">

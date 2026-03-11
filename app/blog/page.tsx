@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/blog'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'VA Loan Articles & Guides — Learn About VA Refinancing',
@@ -13,6 +15,10 @@ export default function BlogPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Articles', path: '/blog' },
+      ])} />
       {/* Hero */}
       <section className="bg-navy-900 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">

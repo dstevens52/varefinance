@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '@/lib/blog'
+import JsonLd from '@/components/JsonLd'
+import { articleSchema, breadcrumbSchema } from '@/lib/schema'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -36,6 +38,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <JsonLd data={[
+        articleSchema({ title: post.title, description: post.description, date: post.date, slug }),
+        breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Articles', path: '/blog' },
+          { name: post.title, path: `/blog/${slug}` },
+        ]),
+      ]} />
       {/* Hero */}
       <section className="bg-navy-900 text-white py-16 px-4">
         <div className="max-w-3xl mx-auto">

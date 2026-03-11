@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'About Varefinance.com — Helping Veterans Navigate VA Loan Benefits',
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+      ])} />
       {/* Hero */}
       <section className="bg-navy-900 text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">

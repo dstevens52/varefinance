@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'VA Home Purchase Loan — Buy a Home With No Down Payment',
@@ -34,6 +36,10 @@ const faqs = [
 export default function VAPurchasePage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'VA Home Purchase Loan', path: '/va-purchase' },
+      ])} />
       {/* Hero */}
       <section className="bg-navy-900 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto">
