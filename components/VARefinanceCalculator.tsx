@@ -918,13 +918,15 @@ export default function VARefinanceCalculator() {
                 The Bottom Line
               </div>
               <p style={{ fontSize: '15px', color: '#cbd5e1', lineHeight: 1.7, margin: 0 }}>
-                {results.monthlySavings > 0 && results.meetsNTB && results.meetsRecoupment
-                  ? `Based on these numbers, refinancing looks like a strong move. You'd save ${formatCurrencyExact(results.monthlySavings)} per month, recoup your costs in ${results.breakEvenMonths} months, and save ${formatCurrency(results.lifetimeInterestSavings)} in interest over the life of the loan. These are estimates — your actual rate, fees, and savings will depend on your lender, credit profile, and current market conditions.`
-                  : results.monthlySavings > 0 && results.meetsNTB && !results.meetsRecoupment
-                    ? `You'd save monthly, but it would take ${results.breakEvenMonths} months to recoup your closing costs. If you plan to stay in the home long enough, it may still be worth it. Talk to a lender about your specific situation and whether they can reduce closing costs.`
-                    : results.monthlySavings > 0 && !results.meetsNTB
-                      ? `You'd save ${formatCurrencyExact(results.monthlySavings)} per month, but the rate reduction doesn't meet the VA's net tangible benefit requirement for a fixed-to-fixed IRRRL. If you're converting from an ARM to a fixed rate, different rules apply. Otherwise, consider waiting for a better rate.`
-                      : `Based on these numbers, refinancing may not make sense right now. Your new payment would be higher, which can be justified if you're shortening your term to build equity faster or switching from an ARM to a fixed rate for payment stability. Otherwise, consider waiting for a lower rate.`}
+                {results.isTypeII
+                  ? `You're accessing ${formatCurrency(results.cashOut)} from your home equity. Your monthly payment will ${results.monthlySavings >= 0 ? `decrease by ${formatCurrencyExact(results.monthlySavings)}` : `increase by ${formatCurrencyExact(Math.abs(results.monthlySavings))}`}/month. Compare this to the cost of alternative borrowing options like a HELOC or personal loan — VA cash-out rates are typically much lower. Make sure the cash serves a purpose that justifies the added monthly cost, such as paying off high-interest debt, home improvements, or other financial goals.`
+                  : results.monthlySavings > 0 && results.meetsNTB && results.meetsRecoupment
+                    ? `Based on these numbers, refinancing looks like a strong move. You'd save ${formatCurrencyExact(results.monthlySavings)} per month, recoup your costs in ${results.breakEvenMonths} months, and save ${formatCurrency(results.lifetimeInterestSavings)} in interest over the life of the loan. These are estimates — your actual rate, fees, and savings will depend on your lender, credit profile, and current market conditions.`
+                    : results.monthlySavings > 0 && results.meetsNTB && !results.meetsRecoupment
+                      ? `You'd save monthly, but it would take ${results.breakEvenMonths} months to recoup your closing costs. If you plan to stay in the home long enough, it may still be worth it. Talk to a lender about your specific situation and whether they can reduce closing costs.`
+                      : results.monthlySavings > 0 && !results.meetsNTB
+                        ? `You'd save ${formatCurrencyExact(results.monthlySavings)} per month, but the rate reduction doesn't meet the VA's net tangible benefit requirement for a fixed-to-fixed IRRRL. If you're converting from an ARM to a fixed rate, different rules apply. Otherwise, consider waiting for a better rate.`
+                        : `Based on these numbers, refinancing may not make sense right now. Your new payment would be higher, which can be justified if you're shortening your term to build equity faster or switching from an ARM to a fixed rate for payment stability. Otherwise, consider waiting for a lower rate.`}
               </p>
             </div>
 
