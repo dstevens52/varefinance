@@ -7,17 +7,17 @@ import { faqSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'VA Cash-Out Refinance — Tap Your Home Equity',
   description:
-    'Access up to 100% of your home equity with a VA Cash-Out Refinance. Pay off debt, fund home improvements, or cover any expense — at competitive VA rates.',
+    'Access your home equity with a VA Cash-Out Refinance. Most lenders allow up to 90% LTV. Pay off debt, fund home improvements, or cover any expense — at competitive VA rates.',
   openGraph: {
     title: 'VA Cash-Out Refinance — Tap Your Home Equity',
-    description: 'Access up to 100% of your home equity with a VA Cash-Out Refinance at competitive VA rates.',
+    description: 'Access your home equity with a VA Cash-Out Refinance. Most lenders allow up to 90% LTV at competitive VA rates.',
   },
 }
 
 const faqs = [
   {
     question: 'How much cash can I get with a VA Cash-Out Refinance?',
-    answer: 'Most VA-approved lenders allow veterans to borrow up to 100% of their home\'s appraised value (known as 100% LTV or loan-to-value). This is significantly more permissive than conventional cash-out refinances, which typically cap at 80% LTV. However, individual lender guidelines may be more conservative — some cap at 90% LTV — so it pays to shop around.',
+    answer: 'The VA technically allows up to 100% LTV, but in practice most veterans should plan around a 90% LTV ceiling. Following Ginnie Mae\'s 2019 pooling restrictions, VA cash-out loans above 90% LTV face significant pricing penalties — loan-level price adjustments of roughly 1.75–2% — that most lenders pass through to the borrower or avoid entirely by capping their programs at 90%. The VA\'s nominal 100% allowance rarely translates into a loan veterans can realistically obtain. At 90% LTV, you can still access substantially more equity than conventional cash-out refinances, which typically cap at 80% LTV.',
   },
   {
     question: 'Do I need a current VA loan to use a VA Cash-Out Refinance?',
@@ -78,7 +78,7 @@ export default function VACashOutPage() {
             <span className="text-gold-400">Tap Into Your Home Equity</span>
           </h1>
           <p className="text-white/70 text-xl max-w-2xl leading-relaxed mb-8">
-            Your home equity is one of your most valuable financial assets. A VA Cash-Out Refinance lets eligible veterans access up to 100% of their home&apos;s value — at competitive VA rates.
+            Your home equity is one of your most valuable financial assets. A VA Cash-Out Refinance lets eligible veterans access up to 90% of their home&apos;s value at most lenders — at competitive VA rates, with no PMI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="#how-it-works" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors text-center">
@@ -127,7 +127,7 @@ export default function VACashOutPage() {
                   ['Must have existing VA loan', 'Yes', 'No'],
                   ['Appraisal required', 'Usually not', 'Yes'],
                   ['Income verification', 'Usually not', 'Yes'],
-                  ['Cash back at closing', 'No', 'Up to 100% LTV'],
+                  ['Cash back at closing', 'No', 'Up to 90% LTV (typical)'],
                   ['Funding fee', '0.5%', '2.15%–3.3%'],
                   ['Can replace non-VA loan', 'No', 'Yes'],
                   ['Typical closing timeline', '14–21 days', '30–45 days'],
@@ -150,7 +150,7 @@ export default function VACashOutPage() {
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-10">Benefits of the VA Cash-Out Refinance</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { title: 'Access Up to 100% of Your Equity', body: 'Most VA lenders allow borrowing up to the full appraised value of your home — far more than the 80% cap typical of conventional cash-out loans.' },
+              { title: 'Access More of Your Equity', body: 'Most VA lenders allow cash-out refinances up to 90% LTV — higher than the 80% cap typical of conventional cash-out loans. The VA technically permits 100% LTV, but Ginnie Mae pricing restrictions mean loans above 90% carry significant rate penalties in practice.' },
               { title: 'No Private Mortgage Insurance (PMI)', body: 'VA loans never require PMI, regardless of your loan-to-value ratio. On a $300,000 loan, that alone saves $150–$250 per month compared to a conventional loan with PMI.' },
               { title: 'Competitive Interest Rates', body: 'VA loans consistently rank among the lowest-rate mortgage products available, often 0.25–0.5% lower than comparable conventional rates.' },
               { title: 'Consolidate High-Interest Debt', body: 'Replace 20%+ credit card rates or 7–8% personal loan rates with a single low VA mortgage rate — potentially saving hundreds per month.' },
@@ -182,7 +182,7 @@ export default function VACashOutPage() {
               { req: 'Military Service', detail: 'You must be an eligible veteran, active-duty service member, National Guard or Reserve member (with qualifying service), or surviving spouse of a veteran.' },
               { req: 'Primary Residence', detail: 'The property must be your primary residence at the time of closing, or you must certify your intent to occupy it as your primary residence.' },
               { req: 'Certificate of Eligibility (COE)', detail: 'You need a valid COE confirming your entitlement. Most lenders can obtain this electronically within minutes through the VA\'s online system.' },
-              { req: 'Sufficient Home Equity', detail: 'While you can borrow up to 100% of your home\'s value, lenders require a recent VA appraisal to establish the current market value.' },
+              { req: 'Sufficient Home Equity', detail: 'A VA appraisal establishes your home\'s current market value, which sets your maximum loan amount. Most lenders cap VA cash-out refinances at 90% LTV — plan your numbers around that figure rather than the VA\'s nominal 100% allowance.' },
               { req: 'Credit & Income Requirements', detail: 'Unlike the IRRRL, the VA Cash-Out Refinance requires full income documentation and credit underwriting. Most lenders require a minimum 620 credit score and stable income history.' },
             ].map(e => (
               <div key={e.req} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-200">

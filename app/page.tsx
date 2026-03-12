@@ -28,7 +28,7 @@ const loanCards = [
     subtitle: '',
     description:
       'Tap into the equity you&apos;ve built in your home. Use the funds for home improvements, debt consolidation, education, or any other purpose — at competitive VA rates.',
-    bullets: ['Borrow up to 100% of home value', 'Open to all veterans, not just VA loan holders', 'Potentially lower your rate too', 'Flexible use of funds'],
+    bullets: ['Borrow up to 90% of home value at most lenders', 'Open to all veterans, not just VA loan holders', 'Potentially lower your rate too', 'Flexible use of funds'],
     cta: 'Learn About Cash-Out',
     accent: false,
   },
