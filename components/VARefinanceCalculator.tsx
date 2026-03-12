@@ -892,7 +892,9 @@ export default function VARefinanceCalculator() {
                 <strong>Monthly Payment:</strong>{' '}
                 {results.monthlySavings > 0
                   ? `Your payment drops by ${formatCurrencyExact(results.monthlySavings)}/month — that's ${formatCurrency(results.monthlySavings * 12)}/year back in your pocket.`
-                  : `Your payment increases by ${formatCurrencyExact(Math.abs(results.monthlySavings))}/month. This may still make sense if you're shortening your term or switching from an ARM to a fixed rate.`}
+                  : results.isTypeII
+                    ? `Your payment increases by ${formatCurrencyExact(Math.abs(results.monthlySavings))}/month. This is expected when taking cash out of your equity.`
+                    : `Your payment increases by ${formatCurrencyExact(Math.abs(results.monthlySavings))}/month. This may still make sense if you're shortening your term or switching from an ARM to a fixed rate.`}
               </StatusBadge>
             </div>
 
