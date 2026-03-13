@@ -48,8 +48,8 @@ export default function KitSignupForm() {
           data-element="errors"
           data-group="alert"
         />
-        <div data-element="fields" data-stacked="false" className="seva-fields formkit-fields">
-          <div className="formkit-field">
+        <div data-element="fields" data-stacked="false" className="seva-fields formkit-fields" style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'center' }}>
+          <div className="formkit-field" style={{ flex: 1 }}>
             <input
               className="formkit-input"
               name="email_address"
@@ -74,6 +74,7 @@ export default function KitSignupForm() {
               backgroundColor: '#c8a032',
               borderRadius: '4px',
               fontWeight: 400,
+              flexShrink: 0,
             }}
           >
             <div className="formkit-spinner">
