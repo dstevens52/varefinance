@@ -7,6 +7,9 @@ import { getPostBySlug, getAllPosts } from '@/lib/blog'
 import JsonLd from '@/components/JsonLd'
 import { articleSchema, breadcrumbSchema } from '@/lib/schema'
 import KitSignupForm from '@/components/KitSignupForm'
+import QuickAnswer from '@/components/QuickAnswer'
+
+const mdxComponents = { QuickAnswer }
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -72,7 +75,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Article */}
           <article className="lg:col-span-2">
             <div className="prose max-w-none">
-              <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+              <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
 
             {/* Bottom educational CTA */}
