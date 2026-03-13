@@ -23,20 +23,20 @@ export default function KitSignupForm() {
       data-uid="2b3aca331d"
       data-format="inline"
       data-version="5"
-      style={{ backgroundColor: 'rgb(249, 250, 251)', borderRadius: '4px' }}
+      style={{ backgroundColor: 'transparent', borderRadius: '4px' }}
     >
       <div data-style="minimal">
         <div
           className="formkit-header"
           data-element="header"
-          style={{ color: 'rgb(77, 77, 77)', fontSize: '27px', fontWeight: 700 }}
+          style={{ color: 'rgb(255, 255, 255)', fontSize: '27px', fontWeight: 700 }}
         >
           <h2>VA Rate Watch</h2>
         </div>
         <div
           className="formkit-subheader"
           data-element="subheader"
-          style={{ color: 'rgb(104, 104, 104)', fontSize: '18px' }}
+          style={{ color: 'rgb(255, 255, 255)', fontSize: '18px' }}
         >
           <p>
             Get weekly VA rate updates — plain-English market analysis delivered to your inbox
@@ -70,7 +70,7 @@ export default function KitSignupForm() {
             className="formkit-submit"
             style={{
               color: 'rgb(255, 255, 255)',
-              backgroundColor: 'rgb(22, 119, 190)',
+              backgroundColor: '#c8a032',
               borderRadius: '4px',
               fontWeight: 400,
             }}
@@ -86,7 +86,7 @@ export default function KitSignupForm() {
         <div
           className="formkit-guarantee"
           data-element="guarantee"
-          style={{ color: 'rgb(77, 77, 77)', fontSize: '13px', fontWeight: 400 }}
+          style={{ color: 'rgb(255, 255, 255)', fontSize: '13px', fontWeight: 400 }}
         >
           <p>We won&apos;t send you spam. Unsubscribe at any time.</p>
         </div>

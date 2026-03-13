@@ -214,7 +214,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter signup */}
-      <section className="bg-white py-16 px-4">
+      <section className="bg-navy-800 py-16 px-4">
         <div className="max-w-xl mx-auto">
           <KitSignupForm />
         </div>
