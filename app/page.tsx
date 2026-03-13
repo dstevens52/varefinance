@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 import { webSiteSchema, breadcrumbSchema } from '@/lib/schema'
-import KitSignupForm from '@/components/KitSignupForm'
 
 export const metadata: Metadata = {
   title: 'VA Loan Refinancing for Veterans & Military Families',
@@ -213,12 +212,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter signup */}
-      <section className="bg-navy-800 py-16 px-4">
-        <div className="max-w-xl mx-auto">
-          <KitSignupForm />
-        </div>
-      </section>
     </>
   )
 }

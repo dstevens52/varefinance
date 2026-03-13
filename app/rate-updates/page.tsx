@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import KitSignupForm from '@/components/KitSignupForm'
 
 export const metadata: Metadata = {
   title: 'VA Rate Updates — Weekly VA Mortgage Rate Watch',
@@ -17,7 +16,6 @@ export default function RateUpdatesPage() {
           plain-English breakdown of where rates are headed and what it means for veterans
           looking to refinance.
         </p>
-        <KitSignupForm />
       </div>
     </section>
   )

@@ -6,7 +6,6 @@ import remarkGfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '@/lib/blog'
 import JsonLd from '@/components/JsonLd'
 import { articleSchema, breadcrumbSchema } from '@/lib/schema'
-import KitSignupForm from '@/components/KitSignupForm'
 import QuickAnswer from '@/components/QuickAnswer'
 
 const mdxComponents = { QuickAnswer }
@@ -142,13 +141,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             )}
           </aside>
-        </div>
-      </section>
-
-      {/* Newsletter signup */}
-      <section className="bg-white py-12 px-4">
-        <div className="max-w-xl mx-auto">
-          <KitSignupForm />
         </div>
       </section>
 
