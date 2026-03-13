@@ -1,0 +1,30 @@
+# VARefinance.com
+
+> VARefinance.com is an independent educational resource about VA loan refinancing for veterans, active-duty service members, and military families. The site does not originate loans. It explains how VA refinance programs work, who qualifies, and how to evaluate whether refinancing makes sense.
+
+The two primary VA refinance programs covered are the VA IRRRL (Interest Rate Reduction Refinance Loan, also called the VA Streamline Refinance) and the VA Cash-Out Refinance. The site also covers VA home purchase loans. All content is written for a veteran audience in plain, non-technical language with no sales pressure.
+
+## Service Pages
+
+- [VA Streamline Refinance (IRRRL)](https://www.varefinance.com/va-irrrl): Comprehensive guide to the VA IRRRL program — eligibility, benefits, process, costs, and FAQs. The IRRRL lets veterans with an existing VA loan refinance to a lower rate with minimal paperwork and no appraisal.
+- [VA Cash-Out Refinance](https://www.varefinance.com/va-cash-out): Complete guide to the VA Cash-Out Refinance — how it works, equity limits, funding fees, Type I vs Type II, and who qualifies. Open to all eligible veterans, not just current VA loan holders.
+- [VA Home Purchase](https://www.varefinance.com/va-purchase): Overview of using a VA loan to purchase a home — zero down payment, no PMI, eligibility requirements.
+- [VA Refinance Decision Tool](https://www.varefinance.com/calculator): Interactive calculator that helps veterans compare IRRRL vs Cash-Out refinancing, estimates savings, checks net tangible benefit requirements, and calculates funding fees.
+
+## Blog Articles
+
+- [What Is a VA IRRRL and How Can It Save You Money?](https://www.varefinance.com/blog/what-is-va-irrrl): Explains how the VA Interest Rate Reduction Refinance Loan works, who qualifies, and realistic savings estimates.
+- [VA Cash-Out Refinance: Tap Into Your Home Equity](https://www.varefinance.com/blog/va-cash-out-tap-into-equity): How the VA Cash-Out Refinance works, what you can use the funds for, and how it compares to the IRRRL.
+- [5 Things Every Veteran Should Know About VA Loan Refinancing](https://www.varefinance.com/blog/5-things-veterans-should-know): Five critical facts every veteran homeowner should understand before refinancing or deciding not to.
+- [How Long Do You Have to Wait to Refinance a VA Loan?](https://www.varefinance.com/blog/va-loan-refinance-waiting-period): The 210-day rule, the 6-payment rule, and how waiting periods differ between IRRRL and Cash-Out.
+- [VA IRRRL vs Conventional Refinance: Which Saves You More?](https://www.varefinance.com/blog/va-irrrl-vs-conventional-refinance): Side-by-side comparison of VA IRRRL and conventional refinance — appraisal, documentation, closing costs, and long-term savings.
+- [Type I vs Type II VA Cash-Out Refinance Explained](https://www.varefinance.com/blog/type-1-vs-type-2-va-cash-out-refinance): Type I keeps your loan balance at or below the payoff amount. Type II increases it. Explains the difference and when each applies.
+- [How to Spot Predatory VA Refinance Offers](https://www.varefinance.com/blog/how-to-spot-predatory-va-refinance-offers): Red flags of predatory VA loan solicitations and how veterans can protect themselves, based on VA and CFPB warnings.
+- [What Drives VA Mortgage Rates Up and Down?](https://www.varefinance.com/blog/what-drives-va-mortgage-rates): Explains the factors that move VA mortgage rates — the Fed, bond markets, inflation, jobs data, and how veterans can track rate trends.
+- [VA IRRRL Closing Costs: What to Expect and How to Roll Them In](https://www.varefinance.com/blog/va-irrrl-closing-costs): Covers the 0.5% funding fee, lender fees, title fees, and the option to roll closing costs into the loan vs paying out of pocket.
+- [VA Funding Fee 2026: Complete Breakdown by Loan Type](https://www.varefinance.com/blog/va-funding-fee-2026): Current funding fee rates by loan type, service category, and down payment. Includes exemptions for disability, Purple Heart, and surviving spouses.
+- [Refinancing a Conventional Loan Into a VA Loan: Step by Step](https://www.varefinance.com/blog/refinance-conventional-to-va): How to refinance from a conventional mortgage into a VA loan using a Cash-Out refi — benefits include dropping PMI and potentially getting a better rate.
+
+## About
+
+- [About VARefinance.com](https://www.varefinance.com/about): Background on the site's mission, editorial approach, and commitment to veteran financial education.
