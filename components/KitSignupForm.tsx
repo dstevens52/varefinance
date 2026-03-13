@@ -49,7 +49,7 @@ export default function KitSignupForm() {
           data-group="alert"
         />
         <div data-element="fields" data-stacked="false" className="seva-fields formkit-fields" style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'center' }}>
-          <div className="formkit-field" style={{ flex: 1 }}>
+          <div className="formkit-field" style={{ flex: '0 0 280px' }}>
             <input
               className="formkit-input"
               name="email_address"
