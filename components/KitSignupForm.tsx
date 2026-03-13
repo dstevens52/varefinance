@@ -59,7 +59,8 @@ export default function KitSignupForm() {
               type="email"
               style={{
                 color: 'rgb(0, 0, 0)',
-                borderColor: 'rgb(227, 227, 227)',
+                backgroundColor: 'white',
+                borderColor: 'rgba(255, 255, 255, 0.4)',
                 borderRadius: '4px',
                 fontWeight: 400,
               }}
