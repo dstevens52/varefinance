@@ -73,9 +73,9 @@ export default function HomePage() {
             <span className="text-gold-400">Now let your VA loan serve you.</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Millions of veterans are leaving money on the table by not refinancing their VA loans. Learn how VA refinancing works — and whether it could save you money.
+            Millions of veterans are leaving money on the table by not refinancing their VA loans. We break down the eligibility rules, funding fees, and net tangible benefit requirements so you can evaluate any refinance offer with confidence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
             <Link
               href="/va-irrrl"
               className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
@@ -87,6 +87,14 @@ export default function HomePage() {
               className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
             >
               Explore VA Cash-Out Refinance
+            </Link>
+          </div>
+          <div className="flex justify-center">
+            <Link
+              href="/calculator"
+              className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-6 py-2.5 rounded-md transition-colors text-base"
+            >
+              Try Our VA Refinance Calculator
             </Link>
           </div>
         </div>
