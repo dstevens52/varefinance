@@ -22,25 +22,22 @@ export default function CalculatorPage() {
         { name: 'VA Refinance Calculator', path: '/calculator' },
       ])} />
 
-      {/* Hero */}
-      <section className="bg-navy-900 text-white py-14 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/30 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-5">
-            Free Educational Tool
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-            VA Refinance <span className="text-gold-400">Calculator</span>
-          </h1>
-          <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
-            Plug in your numbers to see your estimated monthly savings, break-even timeline, and whether the refinance meets VA guidelines — before you ever talk to a lender.
-          </p>
-        </div>
-      </section>
-
       {/* Calculator */}
       <section className="bg-navy-950 py-10 px-4">
         <div className="max-w-4xl mx-auto">
           <VARefinanceCalculator />
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="bg-navy-900 text-white py-10 px-4 border-t border-navy-800">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-3">
+            VA Refinance <span className="text-gold-400">Calculator</span>
+          </h1>
+          <p className="text-white/70 leading-relaxed max-w-2xl mx-auto">
+            Plug in your numbers to see your estimated monthly savings, break-even timeline, and whether the refinance meets VA guidelines — before you ever talk to a lender.
+          </p>
         </div>
       </section>
 
