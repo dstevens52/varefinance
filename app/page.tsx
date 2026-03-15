@@ -89,12 +89,18 @@ export default function HomePage() {
               Explore VA Cash-Out Refinance
             </Link>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-3 flex-wrap">
             <Link
               href="/calculator"
               className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-6 py-2.5 rounded-md transition-colors text-base"
             >
               Try Our VA Refinance Calculator
+            </Link>
+            <Link
+              href="/calculator/break-even"
+              className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-6 py-2.5 rounded-md transition-colors text-base"
+            >
+              Break-Even Calculator
             </Link>
           </div>
         </div>

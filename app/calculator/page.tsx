@@ -44,6 +44,16 @@ export default function CalculatorPage() {
         </div>
       </section>
 
+      {/* Break-even link */}
+      <section className="bg-navy-900 py-6 px-4 border-t border-navy-800">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/70 text-sm">Need a simpler tool? The Break-Even Calculator shows how long it takes to recoup closing costs.</p>
+          <Link href="/calculator/break-even" className="shrink-0 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-5 py-2.5 rounded-md transition-colors text-sm">
+            Break-Even Calculator →
+          </Link>
+        </div>
+      </section>
+
       {/* Context links */}
       <section className="bg-white py-12 px-4 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
