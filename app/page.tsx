@@ -100,16 +100,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What is VA Refinancing */}
+      {/* Calculators */}
       <section className="bg-navy-50 py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-navy-900 mb-4">What Is VA Loan Refinancing?</h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            If you have a VA-backed home loan, you may be eligible to refinance it — potentially lowering your monthly payments, reducing your interest rate, or accessing the equity you&apos;ve built in your home.
-          </p>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            VA refinance programs are backed by the U.S. Department of Veterans Affairs and offer terms that are typically more favorable than conventional refinance options. There are two primary types: the <strong className="text-navy-800">VA IRRRL (Streamline Refinance)</strong> and the <strong className="text-navy-800">VA Cash-Out Refinance</strong>.
-          </p>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-3">Free VA Loan Tools</h2>
+          <p className="text-gray-500 text-center mb-10">Run the numbers before you talk to a lender.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                href: '/calculator',
+                icon: '📊',
+                title: 'VA Refinance Decision Tool',
+                description: 'Should you refinance? Enter your numbers to see monthly savings, break-even timeline, and whether you meet VA requirements.',
+                cta: 'Run the Calculator',
+              },
+              {
+                href: '/calculator/funding-fee',
+                icon: '💰',
+                title: 'VA Funding Fee Calculator',
+                description: 'Calculate your exact funding fee by loan type, usage history, and down payment. See what it costs to finance it.',
+                cta: 'Calculate Your Fee',
+              },
+              {
+                href: '/calculator/irrrl-eligibility',
+                icon: '📅',
+                title: 'IRRRL Eligibility Date Calculator',
+                description: 'Find out exactly when you\'re eligible to refinance based on the VA\'s 210-day and 6-payment seasoning rules.',
+                cta: 'Check Eligibility',
+              },
+            ].map(tool => (
+              <div key={tool.href} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col hover:shadow-md hover:border-navy-200 transition-all">
+                <div className="text-3xl mb-3">{tool.icon}</div>
+                <h3 className="font-bold text-navy-900 text-lg mb-2">{tool.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{tool.description}</p>
+                <Link
+                  href={tool.href}
+                  className="block text-center bg-navy-800 hover:bg-navy-900 text-white font-semibold py-2.5 rounded-md transition-colors text-sm"
+                >
+                  {tool.cta} →
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -157,51 +189,6 @@ export default function HomePage() {
                   }`}
                 >
                   {card.cta} →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Calculators */}
-      <section className="bg-navy-50 py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-3">Free VA Loan Tools</h2>
-          <p className="text-gray-500 text-center mb-10">Run the numbers before you talk to a lender.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                href: '/calculator',
-                icon: '📊',
-                title: 'VA Refinance Decision Tool',
-                description: 'Should you refinance? Enter your numbers to see monthly savings, break-even timeline, and whether you meet VA requirements.',
-                cta: 'Run the Calculator',
-              },
-              {
-                href: '/calculator/funding-fee',
-                icon: '💰',
-                title: 'VA Funding Fee Calculator',
-                description: 'Calculate your exact funding fee by loan type, usage history, and down payment. See what it costs to finance it.',
-                cta: 'Calculate Your Fee',
-              },
-              {
-                href: '/calculator/irrrl-eligibility',
-                icon: '📅',
-                title: 'IRRRL Eligibility Date Calculator',
-                description: 'Find out exactly when you\'re eligible to refinance based on the VA\'s 210-day and 6-payment seasoning rules.',
-                cta: 'Check Eligibility',
-              },
-            ].map(tool => (
-              <div key={tool.href} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col hover:shadow-md hover:border-navy-200 transition-all">
-                <div className="text-3xl mb-3">{tool.icon}</div>
-                <h3 className="font-bold text-navy-900 text-lg mb-2">{tool.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{tool.description}</p>
-                <Link
-                  href={tool.href}
-                  className="block text-center bg-navy-800 hover:bg-navy-900 text-white font-semibold py-2.5 rounded-md transition-colors text-sm"
-                >
-                  {tool.cta} →
                 </Link>
               </div>
             ))}
