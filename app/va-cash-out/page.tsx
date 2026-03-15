@@ -150,7 +150,7 @@ export default function VACashOutPage() {
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-10">Benefits of the VA Cash-Out Refinance</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { title: 'Access More of Your Equity', body: 'Most VA lenders allow cash-out refinances up to 90% LTV — higher than the 80% cap typical of conventional cash-out loans. The VA technically permits 100% LTV, but Ginnie Mae pricing restrictions mean loans above 90% carry significant rate penalties in practice.' },
+              { title: 'Access More of Your Equity', body: 'Most VA lenders allow cash-out refinances up to 90% LTV — higher than the 80% cap typical of conventional cash-out loans. The VA technically permits 100% LTV, but lender risk policies and secondary-market investor preferences mean most lenders cap at 90% LTV in practice.' },
               { title: 'No Private Mortgage Insurance (PMI)', body: 'VA loans never require PMI, regardless of your loan-to-value ratio. On a $300,000 loan, that alone saves $150–$250 per month compared to a conventional loan with PMI.' },
               { title: 'Competitive Interest Rates', body: 'VA loans consistently rank among the lowest-rate mortgage products available, often 0.25–0.5% lower than comparable conventional rates.' },
               { title: 'Consolidate High-Interest Debt', body: 'Replace 20%+ credit card rates or 7–8% personal loan rates with a single low VA mortgage rate — potentially saving hundreds per month.' },
