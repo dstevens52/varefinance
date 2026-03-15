@@ -15,7 +15,7 @@ const navLinks = [
 const calculatorLinks = [
   { href: '/calculator', label: 'Refinance Decision Tool' },
   { href: '/calculator/funding-fee', label: 'Funding Fee Calculator' },
-  { href: '/calculator/irrrl-eligibility', label: 'IRRRL Eligibility Calculator', soon: true },
+  { href: '/calculator/irrrl-eligibility', label: 'IRRRL Eligibility Calculator' },
 ]
 
 export default function Header() {
