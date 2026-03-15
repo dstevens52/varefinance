@@ -45,9 +45,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-sm text-white/90 uppercase tracking-widest mb-4">More Articles</h3>
             <ul className="space-y-2">
-              <li><Link href="/blog/va-loan-refinance-waiting-period" className="text-white/60 hover:text-white text-sm transition-colors">VA Refinance Waiting Period</Link></li>
-              <li><Link href="/blog/va-irrrl-vs-conventional-refinance" className="text-white/60 hover:text-white text-sm transition-colors">IRRRL vs Conventional Refinance</Link></li>
-              <li><Link href="/blog/type-1-vs-type-2-va-cash-out-refinance" className="text-white/60 hover:text-white text-sm transition-colors">Type I vs Type II Cash-Out</Link></li>
+              <li><Link href="/blog/va-funding-fee-2026" className="text-white/60 hover:text-white text-sm transition-colors">VA Funding Fee Guide</Link></li>
+              <li><Link href="/blog/when-to-refinance-va-loan" className="text-white/60 hover:text-white text-sm transition-colors">When to Refinance Your VA Loan</Link></li>
+              <li><Link href="/blog/va-certificate-of-eligibility-how-to-get" className="text-white/60 hover:text-white text-sm transition-colors">How to Get Your VA COE</Link></li>
               <li><Link href="/blog/how-to-spot-predatory-va-refinance-offers" className="text-white/60 hover:text-white text-sm transition-colors">Spotting Predatory Offers</Link></li>
             </ul>
           </div>
