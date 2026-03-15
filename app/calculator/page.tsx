@@ -32,9 +32,9 @@ export default function CalculatorPage() {
       {/* Intro */}
       <section className="bg-navy-900 text-white py-10 px-4 border-t border-navy-800">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold leading-tight mb-3">
             VA Refinance <span className="text-gold-400">Calculator</span>
-          </h1>
+          </h2>
           <p className="text-white/70 leading-relaxed max-w-2xl mx-auto">
             Plug in your numbers to see your estimated monthly savings, break-even timeline, and whether the refinance meets VA guidelines — before you ever talk to a lender.
           </p>

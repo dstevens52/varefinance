@@ -134,7 +134,7 @@ export default function FundingFeeCalculatorPage() {
               The VA funding fee is a one-time charge that helps sustain the VA home loan program for future veterans. Unlike mortgage insurance on conventional or FHA loans, the funding fee is a flat percentage paid once — not an ongoing monthly cost.
             </p>
             <p>
-              Most veterans choose to finance the fee rather than pay it out of pocket at closing. When financed, the fee is added to the loan balance and repaid over the life of the loan. The monthly cost is modest — on a $350,000 loan with a 2.15% fee ($7,525), financing it at 6% over 30 years adds about $45/month to the payment.
+              Most veterans choose to finance the fee rather than pay it out of pocket at closing. When financed, the fee is added to the loan balance and repaid over the life of the loan. The monthly cost is modest — on a $350,000 loan with a 2.15% fee ($7,525), financing it at 5.5% over 30 years adds about $43/month to the payment.
             </p>
             <p>
               If you are rated as having a service-connected disability by the VA, you are exempt from the funding fee entirely. Your lender will verify your exempt status through your Certificate of Eligibility (COE). Make sure your disability rating is on file with the VA before you apply so the exemption can be applied at closing.
