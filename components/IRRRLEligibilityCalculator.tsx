@@ -368,7 +368,7 @@ export default function IRRRLEligibilityCalculator() {
             {/* Milestone rows */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
               <MilestoneRow
-                label="210 days from first payment"
+                label="210 days from first payment due date"
                 date={result.date210}
                 isBinding={result.bindingRule === '210-day'}
                 isPast={result.date210 <= today}
