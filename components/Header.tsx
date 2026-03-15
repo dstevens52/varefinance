@@ -42,9 +42,7 @@ export default function Header() {
                 key={href}
                 href={href}
                 className={`text-sm font-medium transition-colors ${
-                  pathname === href
-                    ? 'text-gold-400'
-                    : 'text-white/80 hover:text-white'
+                  pathname === href ? 'text-gold-400' : 'text-white/80 hover:text-white'
                 }`}
               >
                 {label}
@@ -77,29 +75,19 @@ export default function Header() {
 
               {calcOpen && (
                 <div className="absolute right-0 top-full mt-1 w-56 bg-navy-950 border border-navy-800 rounded-xl shadow-xl overflow-hidden">
-                  {calculatorLinks.map(({ href, label, soon }) => (
-                    soon ? (
-                      <div
-                        key={href}
-                        className="flex items-center justify-between px-4 py-3 text-sm text-white/40 cursor-default border-t border-navy-800 first:border-t-0"
-                      >
-                        <span>{label}</span>
-                        <span className="text-xs bg-navy-800 text-white/40 px-1.5 py-0.5 rounded">Soon</span>
-                      </div>
-                    ) : (
-                      <Link
-                        key={href}
-                        href={href}
-                        onClick={() => setCalcOpen(false)}
-                        className={`block px-4 py-3 text-sm transition-colors border-t border-navy-800 first:border-t-0 ${
-                          pathname === href || (href === '/calculator' && pathname === '/calculator')
-                            ? 'text-gold-400 bg-navy-800'
-                            : 'text-white/80 hover:text-white hover:bg-navy-800'
-                        }`}
-                      >
-                        {label}
-                      </Link>
-                    )
+                  {calculatorLinks.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={() => setCalcOpen(false)}
+                      className={`block px-4 py-3 text-sm transition-colors border-t border-navy-800 first:border-t-0 ${
+                        pathname === href
+                          ? 'text-gold-400 bg-navy-800'
+                          : 'text-white/80 hover:text-white hover:bg-navy-800'
+                      }`}
+                    >
+                      {label}
+                    </Link>
                   ))}
                 </div>
               )}
@@ -143,24 +131,17 @@ export default function Header() {
             ))}
             <div className="border-t border-navy-800 pt-3 mt-1">
               <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-2">Calculators</p>
-              {calculatorLinks.map(({ href, label, soon }) => (
-                soon ? (
-                  <div key={href} className="flex items-center justify-between py-1">
-                    <span className="text-sm text-white/30">{label}</span>
-                    <span className="text-xs bg-navy-800 text-white/30 px-1.5 py-0.5 rounded">Soon</span>
-                  </div>
-                ) : (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`block text-sm font-medium py-1 ${
-                      pathname === href ? 'text-gold-400' : 'text-white/80'
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                )
+              {calculatorLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block text-sm font-medium py-1 ${
+                    pathname === href ? 'text-gold-400' : 'text-white/80'
+                  }`}
+                >
+                  {label}
+                </Link>
               ))}
             </div>
           </div>

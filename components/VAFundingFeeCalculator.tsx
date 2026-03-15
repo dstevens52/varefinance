@@ -147,8 +147,20 @@ export default function VAFundingFeeCalculator() {
         color: '#e2e8f0',
       }}
     >
+      <style>{`
+        @media (max-width: 600px) {
+          .vff-tab-row { flex-direction: column !important; gap: 6px !important; }
+          .vff-loan-grid { grid-template-columns: 1fr !important; }
+          .vff-downpayment-tabs { flex-direction: column !important; gap: 6px !important; }
+          .vff-body-padding { padding: 18px !important; }
+          .vff-results-padding { padding: 18px !important; }
+          .vff-header { padding: 24px 16px 20px !important; }
+          .vff-h1 { font-size: 24px !important; }
+          .vff-radio-card { padding: 8px 10px !important; }
+        }
+      `}</style>
       {/* Header */}
-      <div style={{ textAlign: 'center', padding: '40px 20px 32px' }}>
+      <div className="vff-header" style={{ textAlign: 'center', padding: '40px 20px 32px' }}>
         <div
           style={{
             fontSize: '12px',
@@ -162,6 +174,7 @@ export default function VAFundingFeeCalculator() {
           VA Funding Fee Calculator
         </div>
         <h1
+          className="vff-h1"
           style={{
             fontSize: '32px',
             fontWeight: 700,
@@ -196,11 +209,12 @@ export default function VAFundingFeeCalculator() {
         }}
       >
         {/* Inputs */}
-        <div style={{ padding: '28px' }}>
+        <div className="vff-body-padding" style={{ padding: '28px' }}>
 
           {/* Loan type selector */}
           <div style={{ marginBottom: '28px' }}>
             <div
+              className="vff-tab-row"
               style={{
                 display: 'flex',
                 gap: '8px',
@@ -237,7 +251,7 @@ export default function VAFundingFeeCalculator() {
           {/* Loan details section */}
           <div style={{ marginBottom: '24px' }}>
             <SectionHeader>Loan Details</SectionHeader>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div className="vff-loan-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
 
               {/* Loan amount */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -316,6 +330,7 @@ export default function VAFundingFeeCalculator() {
                     ].map((opt) => (
                       <label
                         key={String(opt.value)}
+                        className="vff-radio-card"
                         onClick={() => setIsSubsequent(opt.value)}
                         style={{
                           display: 'flex',
@@ -404,6 +419,7 @@ export default function VAFundingFeeCalculator() {
                   Down Payment
                 </label>
                 <div
+                  className="vff-downpayment-tabs"
                   style={{
                     display: 'flex',
                     gap: '8px',
@@ -496,6 +512,7 @@ export default function VAFundingFeeCalculator() {
         {/* Results */}
         {result && (
           <div
+            className="vff-results-padding"
             style={{
               borderTop: '2px solid #1e3a5f',
               padding: '28px',
