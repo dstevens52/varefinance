@@ -4,9 +4,9 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'About Varefinance.com — Helping Veterans Navigate VA Loan Benefits',
+  title: 'About VARefinance.com — Helping Veterans Navigate VA Loan Benefits',
   description:
-    'Varefinance.com is an educational resource dedicated to helping veterans, active-duty service members, and military families understand and use their VA loan refinancing benefits.',
+    'VARefinance.com is an educational resource dedicated to helping veterans, active-duty service members, and military families understand and use their VA loan refinancing benefits.',
 }
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="bg-navy-900 text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            About <span className="text-gold-400">Varefinance.com</span>
+            About <span className="text-gold-400">VARefinance.com</span>
           </h1>
           <p className="text-white/70 text-xl leading-relaxed">
             An independent educational resource for veterans and military families navigating VA loan refinancing options.
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-navy-900 mb-6">Our Mission</h2>
           <div className="prose max-w-none">
             <p>
-              Varefinance.com exists because too many veterans are leaving money on the table. Millions of veterans hold VA loans with interest rates significantly above current market rates — yet the VA IRRRL and Cash-Out Refinance programs that could help them go largely unused due to a simple lack of awareness.
+              VARefinance.com exists because too many veterans are leaving money on the table. Millions of veterans hold VA loans with interest rates significantly above current market rates — yet the VA IRRRL and Cash-Out Refinance programs that could help them go largely unused due to a simple lack of awareness.
             </p>
             <p>
               The VA loan benefit is one of the most valuable pieces of compensation earned through military service. Our mission is straightforward: give veterans the clear, honest, jargon-free information they need to understand their refinancing options and make confident decisions.
@@ -106,7 +106,7 @@ export default function AboutPage() {
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <h3 className="font-semibold text-navy-900 mb-3">Important Disclosures</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-3">
-              Varefinance.com is an independent educational website. We are not affiliated with the U.S. Department of Veterans Affairs or any government agency. We do not make mortgage loans, take loan applications, or engage in mortgage lending or brokerage activities.
+              VARefinance.com is an independent educational website. We are not affiliated with the U.S. Department of Veterans Affairs or any government agency. We do not make mortgage loans, take loan applications, or engage in mortgage lending or brokerage activities.
             </p>
             <p className="text-gray-600 text-sm leading-relaxed">
               Information on this site is provided for educational purposes only and should not be construed as financial or legal advice. VA loan eligibility, rates, and terms are determined by the VA and individual lenders. Always consult with a qualified VA-approved lender and, if appropriate, a financial advisor before making refinancing decisions.

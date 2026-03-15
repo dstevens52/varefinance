@@ -15,22 +15,22 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 export const metadata: Metadata = {
   metadataBase: new URL('https://varefinance.com'),
   title: {
-    default: 'Varefinance.com — VA Loan Refinancing for Veterans',
-    template: '%s | Varefinance.com',
+    default: 'VARefinance.com — VA Loan Refinancing for Veterans',
+    template: '%s | VARefinance.com',
   },
   description:
-    'Varefinance.com helps veterans and military families understand VA loan refinancing options including VA IRRRL and VA Cash-Out refinance. You served your country — now let your VA loan serve you.',
+    'VARefinance.com helps veterans and military families understand VA loan refinancing options including VA IRRRL and VA Cash-Out refinance. You served your country — now let your VA loan serve you.',
   keywords: ['VA loan refinance', 'VA IRRRL', 'VA cash-out refinance', 'veteran home loan', 'military mortgage', 'streamline refinance'],
   openGraph: {
     type: 'website',
-    siteName: 'Varefinance.com',
-    title: 'Varefinance.com — VA Loan Refinancing for Veterans',
+    siteName: 'VARefinance.com',
+    title: 'VARefinance.com — VA Loan Refinancing for Veterans',
     description: 'Educational resource helping veterans and military families get the most from their VA home loan benefits.',
     url: 'https://varefinance.com',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Varefinance.com — VA Loan Refinancing for Veterans',
+    title: 'VARefinance.com — VA Loan Refinancing for Veterans',
     description: 'Educational resource helping veterans and military families get the most from their VA home loan benefits.',
   },
 }

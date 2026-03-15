@@ -15,7 +15,7 @@ export default function Footer() {
               You served your country. Now let your VA loan serve you.
             </p>
             <p className="text-white/40 text-xs mt-4 leading-relaxed">
-              Varefinance.com is an independent educational resource for veterans and military families. We do not originate loans.
+              VARefinance.com is an independent educational resource for veterans and military families. We do not originate loans.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} Varefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link> · <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Use</Link> · <Link href="/disclosure" className="hover:text-white/60 transition-colors">Disclosure</Link> · <Link href="/editorial-policy" className="hover:text-white/60 transition-colors">Editorial Policy</Link>
+            © {new Date().getFullYear()} VARefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link> · <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Use</Link> · <Link href="/disclosure" className="hover:text-white/60 transition-colors">Disclosure</Link> · <Link href="/editorial-policy" className="hover:text-white/60 transition-colors">Editorial Policy</Link>
           </p>
           <p className="text-white/30 text-xs text-center">
             For informational purposes only. Not a lender or mortgage broker. VA loan eligibility determined by the Department of Veterans Affairs.
