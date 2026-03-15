@@ -34,6 +34,7 @@ const faqs = [
   {
     question: 'What is the funding fee for a VA Cash-Out Refinance?',
     answer: 'The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars.',
+    answerNode: (<>The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars. Use our <a href="/calculator/funding-fee" className="text-navy-700 underline hover:text-gold-600">VA Funding Fee Calculator</a> to see your exact fee amount.</>),
   },
   {
     question: 'How does a VA Cash-Out Refinance affect my credit?',

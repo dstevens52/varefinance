@@ -70,6 +70,7 @@ const faqs = [
   {
     question: 'What is the VA funding fee for an IRRRL?',
     answer: 'The VA funding fee for an IRRRL is 0.5% of the loan amount. This is significantly lower than the funding fee for a VA purchase loan (which ranges from 1.25% to 3.3%). Certain veterans with service-connected disabilities may be exempt from the funding fee entirely.',
+    answerNode: (<>The VA funding fee for an IRRRL is 0.5% of the loan amount. This is significantly lower than the funding fee for a VA purchase loan (which ranges from 1.25% to 3.3%). Certain veterans with service-connected disabilities may be exempt from the funding fee entirely. Use our <a href="/calculator/funding-fee" className="text-navy-700 underline hover:text-gold-600">VA Funding Fee Calculator</a> to see your exact fee and the monthly cost of financing it.</>),
   },
   {
     question: 'Can I get cash back at closing on a VA IRRRL?',

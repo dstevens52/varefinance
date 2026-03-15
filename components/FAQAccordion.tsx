@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 interface FAQItem {
   question: string
   answer: string
+  answerNode?: React.ReactNode
 }
 
 export default function FAQAccordion({ items }: { items: FAQItem[] }) {
@@ -29,7 +30,7 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
             aria-hidden={open !== i}
           >
             <div className="px-6 pb-5 pt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
-              {item.answer}
+              {item.answerNode ?? item.answer}
             </div>
           </div>
         </div>

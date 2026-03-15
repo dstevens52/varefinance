@@ -125,9 +125,9 @@ export default function VAFundingFeeCalculator() {
     const feePct = exempt ? 0 : getFundingFeePct(loanType, isSubsequent, downPctBucket)
     const feeAmount = amount * (feePct / 100)
     const newLoanAmount = amount + feeAmount
-    const monthlyImpact = calcMonthlyPayment(feeAmount, 6, 30)
-    const monthlyWithFee = calcMonthlyPayment(newLoanAmount, 6, 30)
-    const monthlyWithout = calcMonthlyPayment(amount, 6, 30)
+    const monthlyImpact = calcMonthlyPayment(feeAmount, 5.5, 30)
+    const monthlyWithFee = calcMonthlyPayment(newLoanAmount, 5.5, 30)
+    const monthlyWithout = calcMonthlyPayment(amount, 5.5, 30)
 
     return { feePct, feeAmount, newLoanAmount, monthlyImpact, monthlyWithFee, monthlyWithout, amount }
   }, [loanType, isSubsequent, downPctBucket, loanAmount, exempt])
@@ -250,7 +250,7 @@ export default function VAFundingFeeCalculator() {
                     letterSpacing: '0.05em',
                   }}
                 >
-                  Loan Amount
+                  {loanType === 'purchase' ? 'Base Loan Amount' : 'Loan Amount'}
                 </label>
                 <div
                   style={{
@@ -579,7 +579,7 @@ export default function VAFundingFeeCalculator() {
               <ResultCard
                 label="Monthly Cost of Fee"
                 value={exempt ? '$0' : formatCurrencyExact(result.monthlyImpact)}
-                sub="At 6%, 30-yr estimate"
+                sub="At 5.5%, 30-yr estimate"
               />
             </div>
 
@@ -610,8 +610,8 @@ export default function VAFundingFeeCalculator() {
                   { label: 'Loan amount', value: formatCurrency(result.amount) },
                   { label: `VA funding fee (${result.feePct}%)`, value: formatCurrency(result.feeAmount) },
                   { label: 'New loan amount (fee financed)', value: formatCurrency(result.newLoanAmount), bold: true },
-                  { label: 'Est. monthly payment without fee (6%, 30-yr)', value: formatCurrencyExact(result.monthlyWithout) },
-                  { label: 'Est. monthly payment with fee financed (6%, 30-yr)', value: formatCurrencyExact(result.monthlyWithFee), bold: true },
+                  { label: 'Est. monthly payment without fee (5.5%, 30-yr)', value: formatCurrencyExact(result.monthlyWithout) },
+                  { label: 'Est. monthly payment with fee financed (5.5%, 30-yr)', value: formatCurrencyExact(result.monthlyWithFee), bold: true },
                   { label: 'Monthly impact of financing the fee', value: `+${formatCurrencyExact(result.monthlyImpact)}`, bold: true },
                 ].map((row, i) => (
                   <div
@@ -661,8 +661,8 @@ export default function VAFundingFeeCalculator() {
                 {exempt
                   ? `As an exempt veteran, you owe no funding fee on this loan. This saves you ${formatCurrency((parseFloat(loanAmount.replace(/,/g, '')) || 0) * (getFundingFeePct(loanType, isSubsequent, downPctBucket) / 100))} compared to a non-exempt borrower in the same situation. Your exemption status should be verified by your lender using your Certificate of Eligibility.`
                   : loanType === 'irrrl'
-                  ? `The IRRRL funding fee of 0.5% is the lowest available and is the same regardless of how many times you've used your VA benefit. On a ${formatCurrency(result.amount)} loan, the fee is ${formatCurrency(result.feeAmount)}. Most veterans roll it into the loan rather than paying out of pocket — the monthly cost is only ${formatCurrencyExact(result.monthlyImpact)} at a 6% rate.`
-                  : `Your funding fee of ${result.feePct}% equals ${formatCurrency(result.feeAmount)} on this loan. Most VA borrowers finance the fee rather than paying it at closing — it adds ${formatCurrencyExact(result.monthlyImpact)}/month to the payment at a 6% rate. If you believe you may qualify for an exemption, confirm your status with the VA before closing.`}
+                  ? `The IRRRL funding fee of 0.5% is the lowest available and is the same regardless of how many times you've used your VA benefit. On a ${formatCurrency(result.amount)} loan, the fee is ${formatCurrency(result.feeAmount)}. Most veterans roll it into the loan rather than paying out of pocket — the monthly cost is only ${formatCurrencyExact(result.monthlyImpact)} at a 5.5% rate.`
+                  : `Your funding fee of ${result.feePct}% equals ${formatCurrency(result.feeAmount)} on this loan. Most VA borrowers finance the fee rather than paying it at closing — it adds ${formatCurrencyExact(result.monthlyImpact)}/month to the payment at a 5.5% rate. If you believe you may qualify for an exemption, confirm your status with the VA before closing.`}
               </p>
             </div>
 
@@ -676,7 +676,7 @@ export default function VAFundingFeeCalculator() {
                 textAlign: 'center',
               }}
             >
-              Monthly payment estimates assume a 6% interest rate and 30-year term for illustrative purposes only.
+              Monthly payment estimates assume a 5.5% interest rate and 30-year term for illustrative purposes only.
               Actual rates and payments will vary. Consult a VA-approved lender for precise figures.
             </p>
           </div>

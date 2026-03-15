@@ -8,14 +8,22 @@ const navLinks = [
   { href: '/va-irrrl', label: 'VA Streamline' },
   { href: '/va-cash-out', label: 'VA Cash-Out' },
   { href: '/va-purchase', label: 'VA Purchase' },
-  { href: '/calculator', label: 'Calculator' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ]
 
+const calculatorLinks = [
+  { href: '/calculator', label: 'Refinance Decision Tool' },
+  { href: '/calculator/funding-fee', label: 'Funding Fee Calculator' },
+  { href: '/calculator/irrrl-eligibility', label: 'IRRRL Eligibility Calculator', soon: true },
+]
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [calcOpen, setCalcOpen] = useState(false)
   const pathname = usePathname()
+
+  const isCalcActive = pathname.startsWith('/calculator')
 
   return (
     <header className="sticky top-0 z-50 bg-navy-900 shadow-md">
@@ -42,6 +50,60 @@ export default function Header() {
                 {label}
               </Link>
             ))}
+
+            {/* Calculators dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setCalcOpen(true)}
+              onMouseLeave={() => setCalcOpen(false)}
+            >
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  isCalcActive ? 'text-gold-400' : 'text-white/80 hover:text-white'
+                }`}
+                onClick={() => setCalcOpen(!calcOpen)}
+                aria-expanded={calcOpen}
+              >
+                Calculators
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform ${calcOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {calcOpen && (
+                <div className="absolute right-0 top-full mt-1 w-56 bg-navy-950 border border-navy-800 rounded-xl shadow-xl overflow-hidden">
+                  {calculatorLinks.map(({ href, label, soon }) => (
+                    soon ? (
+                      <div
+                        key={href}
+                        className="flex items-center justify-between px-4 py-3 text-sm text-white/40 cursor-default border-t border-navy-800 first:border-t-0"
+                      >
+                        <span>{label}</span>
+                        <span className="text-xs bg-navy-800 text-white/40 px-1.5 py-0.5 rounded">Soon</span>
+                      </div>
+                    ) : (
+                      <Link
+                        key={href}
+                        href={href}
+                        onClick={() => setCalcOpen(false)}
+                        className={`block px-4 py-3 text-sm transition-colors border-t border-navy-800 first:border-t-0 ${
+                          pathname === href || (href === '/calculator' && pathname === '/calculator')
+                            ? 'text-gold-400 bg-navy-800'
+                            : 'text-white/80 hover:text-white hover:bg-navy-800'
+                        }`}
+                      >
+                        {label}
+                      </Link>
+                    )
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Mobile hamburger */}
@@ -79,6 +141,28 @@ export default function Header() {
                 {label}
               </Link>
             ))}
+            <div className="border-t border-navy-800 pt-3 mt-1">
+              <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-2">Calculators</p>
+              {calculatorLinks.map(({ href, label, soon }) => (
+                soon ? (
+                  <div key={href} className="flex items-center justify-between py-1">
+                    <span className="text-sm text-white/30">{label}</span>
+                    <span className="text-xs bg-navy-800 text-white/30 px-1.5 py-0.5 rounded">Soon</span>
+                  </div>
+                ) : (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block text-sm font-medium py-1 ${
+                      pathname === href ? 'text-gold-400' : 'text-white/80'
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                )
+              ))}
+            </div>
           </div>
         </div>
       )}
