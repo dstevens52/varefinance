@@ -76,9 +76,6 @@ export default function FundingFeeCalculatorPage() {
           <p className="text-white/70 leading-relaxed max-w-2xl mx-auto">
             The VA funding fee is a one-time charge paid at closing or financed into the loan. The rate depends on your loan type, whether it&apos;s your first time using the VA benefit, and your down payment amount.
           </p>
-          <Link href="/calculator" className="inline-block mt-4 text-white/50 hover:text-white/80 text-sm transition-colors">
-            ← Back to VA Refinance Decision Tool
-          </Link>
         </div>
       </section>
 
@@ -188,6 +185,13 @@ export default function FundingFeeCalculatorPage() {
           </div>
         </div>
       </section>
+
+      {/* Back link */}
+      <div className="bg-white py-6 px-4 border-t border-gray-100 text-center">
+        <Link href="/calculator" className="text-gray-400 hover:text-navy-700 text-sm transition-colors">
+          ← Back to VA Refinance Decision Tool
+        </Link>
+      </div>
     </>
   )
 }
