@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} Varefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+            © {new Date().getFullYear()} Varefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link> · <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Use</Link>
           </p>
           <p className="text-white/30 text-xs text-center">
             For informational purposes only. Not a lender or mortgage broker. VA loan eligibility determined by the Department of Veterans Affairs.
