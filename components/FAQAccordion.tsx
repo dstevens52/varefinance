@@ -23,11 +23,15 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
               +
             </span>
           </button>
-          {open === i && (
-            <div className="px-6 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100">
-              <div className="pt-4">{item.answer}</div>
+          <div
+            className="border-t border-gray-100 overflow-hidden transition-all duration-200"
+            style={open === i ? { maxHeight: '1000px', visibility: 'visible' } : { maxHeight: 0, visibility: 'hidden' }}
+            aria-hidden={open !== i}
+          >
+            <div className="px-6 pb-5 pt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+              {item.answer}
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>
