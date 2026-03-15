@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 
 function parseNum(val: string): number {
   const n = parseFloat(val.replace(/,/g, ''))
@@ -23,21 +23,52 @@ export default function BreakEvenCalculator() {
     return { type: 'result' as const, months, years, remMonths }
   }, [costs, savings, closingCosts, monthlySavings])
 
-  const inputClass =
-    'w-full border border-gray-300 rounded-lg px-4 py-3 text-navy-900 text-base focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent'
-  const labelClass = 'block text-sm font-semibold text-navy-900 mb-1'
-  const helperClass = 'text-xs text-gray-500 mt-1'
+  const labelStyle: React.CSSProperties = {
+    fontSize: '13px',
+    fontWeight: 600,
+    color: '#94a3b8',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    display: 'block',
+    marginBottom: '6px',
+  }
+  const inputWrapStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: '#0f1d32',
+    border: '1px solid #1e3a5f',
+    borderRadius: '8px',
+    overflow: 'hidden',
+  }
+  const prefixStyle: React.CSSProperties = {
+    padding: '12px 0 12px 14px',
+    color: '#64748b',
+    fontSize: '16px',
+    fontWeight: 500,
+  }
+  const inputStyle: React.CSSProperties = {
+    flex: 1,
+    padding: '12px 14px 12px 4px',
+    backgroundColor: 'transparent',
+    border: 'none',
+    outline: 'none',
+    color: '#e2e8f0',
+    fontSize: '16px',
+    fontWeight: 500,
+    width: '100%',
+  }
+  const helperClass = 'text-xs mt-1.5'
 
   return (
     <div className="bg-navy-950 rounded-2xl p-6 sm:p-8">
       {/* Inputs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <div>
-          <label className={labelClass} htmlFor="closing-costs">
-            Total Closing Costs ($)
+          <label style={labelStyle} htmlFor="closing-costs">
+            Total Closing Costs
           </label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+          <div style={inputWrapStyle}>
+            <span style={prefixStyle}>$</span>
             <input
               id="closing-costs"
               type="number"
@@ -45,20 +76,20 @@ export default function BreakEvenCalculator() {
               placeholder="e.g. 4500"
               value={closingCosts}
               onChange={e => setClosingCosts(e.target.value)}
-              className={`${inputClass} pl-7`}
+              style={inputStyle}
             />
           </div>
-          <p className={helperClass}>
+          <p className={helperClass} style={{ color: '#64748b' }}>
             Include lender fees, title fees, and other closing costs. Exclude the VA funding fee and escrow/prepaids.
           </p>
         </div>
 
         <div>
-          <label className={labelClass} htmlFor="monthly-savings">
-            Monthly Savings ($)
+          <label style={labelStyle} htmlFor="monthly-savings">
+            Monthly Savings
           </label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 font-medium">$</span>
+          <div style={inputWrapStyle}>
+            <span style={prefixStyle}>$</span>
             <input
               id="monthly-savings"
               type="number"
@@ -66,10 +97,10 @@ export default function BreakEvenCalculator() {
               placeholder="e.g. 180"
               value={monthlySavings}
               onChange={e => setMonthlySavings(e.target.value)}
-              className={`${inputClass} pl-7`}
+              style={inputStyle}
             />
           </div>
-          <p className={helperClass}>
+          <p className={helperClass} style={{ color: '#64748b' }}>
             The difference between your current monthly P&amp;I payment and your new monthly P&amp;I payment.
           </p>
         </div>
