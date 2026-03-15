@@ -53,6 +53,13 @@ export default function CalculatorPage() {
                 <p className="text-white/50 text-xs leading-relaxed">Calculate your exact funding fee by loan type, usage history, and down payment. See the cost if you finance it.</p>
               </div>
             </Link>
+            <Link href="/calculator/irrrl-eligibility" className="flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl p-5 transition-colors group">
+              <div className="text-2xl">📅</div>
+              <div>
+                <h3 className="font-semibold text-white text-sm group-hover:text-gold-400 transition-colors mb-1">IRRRL Eligibility Date Calculator</h3>
+                <p className="text-white/50 text-xs leading-relaxed">Enter your closing and first payment dates to see exactly when you meet the VA's 210-day and 6-payment seasoning rules.</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
