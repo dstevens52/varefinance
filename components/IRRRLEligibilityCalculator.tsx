@@ -133,6 +133,7 @@ function MilestoneRow({
 }) {
   return (
     <div
+      className="irrl-milestone"
       style={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -246,8 +247,19 @@ export default function IRRRLEligibilityCalculator() {
         color: '#e2e8f0',
       }}
     >
+      <style>{`
+        @media (max-width: 600px) {
+          .irrl-date-grid { grid-template-columns: 1fr !important; }
+          .irrl-padding { padding: 18px !important; }
+          .irrl-header { padding: 24px 16px 20px !important; }
+          .irrl-h1 { font-size: 24px !important; }
+          .irrl-milestone { flex-wrap: wrap; gap: 6px !important; }
+          .irrl-milestone-label { font-size: 12px !important; }
+          .irrl-eligible-date { font-size: 20px !important; }
+        }
+      `}</style>
       {/* Header */}
-      <div style={{ textAlign: 'center', padding: '40px 20px 32px' }}>
+      <div className="irrl-header" style={{ textAlign: 'center', padding: '40px 20px 32px' }}>
         <div
           style={{
             fontSize: '12px',
@@ -261,6 +273,7 @@ export default function IRRRLEligibilityCalculator() {
           IRRRL Eligibility Calculator
         </div>
         <h1
+          className="irrl-h1"
           style={{
             fontSize: '32px',
             fontWeight: 700,
@@ -295,9 +308,9 @@ export default function IRRRLEligibilityCalculator() {
         }}
       >
         {/* Inputs */}
-        <div style={{ padding: '28px' }}>
+        <div className="irrl-padding" style={{ padding: '28px' }}>
           <SectionHeader>Your Current VA Loan</SectionHeader>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+          <div className="irrl-date-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             <DateField
               id="closing-date"
               label="Closing Date"
@@ -346,6 +359,7 @@ export default function IRRRLEligibilityCalculator() {
         {/* Results */}
         {result && (
           <div
+            className="irrl-padding"
             style={{
               borderTop: '2px solid #1e3a5f',
               padding: '28px',
@@ -405,6 +419,7 @@ export default function IRRRLEligibilityCalculator() {
                 Earliest IRRRL Eligible Date
               </div>
               <div
+                className="irrl-eligible-date"
                 style={{
                   fontSize: '28px',
                   fontWeight: 700,

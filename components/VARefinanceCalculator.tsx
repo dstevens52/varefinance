@@ -376,6 +376,13 @@ export default function VARefinanceCalculator() {
         color: '#e2e8f0',
       }}
     >
+      <style>{`
+        @media (max-width: 600px) {
+          .varc-grid { grid-template-columns: 1fr !important; }
+          .varc-results-grid { grid-template-columns: 1fr !important; }
+          .varc-padding { padding: 18px !important; }
+        }
+      `}</style>
       {/* Header */}
       <div style={{ textAlign: 'center', padding: '40px 20px 32px' }}>
         <div
@@ -426,7 +433,7 @@ export default function VARefinanceCalculator() {
         }}
       >
         {/* Inputs section */}
-        <div style={{ padding: '28px' }}>
+        <div className="varc-padding" style={{ padding: '28px' }}>
           {/* Refinance type selector */}
           <div
             style={{
@@ -480,7 +487,7 @@ export default function VARefinanceCalculator() {
             >
               Your Current Loan
             </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div className="varc-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
               <InputField
                 label="Current Loan Balance"
                 value={loanBalance}
@@ -533,7 +540,7 @@ export default function VARefinanceCalculator() {
             >
               New Loan Terms
             </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div className="varc-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
               <InputField
                 label="New Interest Rate"
                 value={newRate}
@@ -573,6 +580,7 @@ export default function VARefinanceCalculator() {
                 Cash-Out Options
               </h3>
               <div
+                className="varc-grid"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
@@ -631,6 +639,7 @@ export default function VARefinanceCalculator() {
               Costs &amp; Fees
             </h3>
             <div
+              className="varc-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
@@ -683,6 +692,7 @@ export default function VARefinanceCalculator() {
         {/* Results section */}
         {results && (
           <div
+            className="varc-padding"
             style={{
               borderTop: '2px solid #1e3a5f',
               padding: '28px',
@@ -704,6 +714,7 @@ export default function VARefinanceCalculator() {
 
             {/* Key metrics */}
             <div
+              className="varc-results-grid varc-padding"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr 1fr',
