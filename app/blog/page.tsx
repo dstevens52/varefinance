@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/blog'
 import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema } from '@/lib/schema'
+import BlogFilter from '@/components/BlogFilter'
 
 export const metadata: Metadata = {
   title: 'VA Loan Articles & Guides — Learn About VA Refinancing',
@@ -32,41 +33,7 @@ export default function BlogPage() {
       {/* Articles */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          {posts.length === 0 ? (
-            <p className="text-gray-500 text-center py-20">Articles coming soon.</p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map(post => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                  <article className="h-full bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-navy-200 transition-all">
-                    <div className="bg-navy-800 h-2" />
-                    <div className="p-6 flex flex-col h-full">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xs font-semibold text-gold-600 bg-gold-100 px-2.5 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                        <span className="text-xs text-gray-400">{post.readTime}</span>
-                      </div>
-                      <h2 className="font-bold text-navy-900 text-lg leading-snug mb-3 group-hover:text-navy-700 transition-colors">
-                        {post.title}
-                      </h2>
-                      <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">
-                        {post.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-400">
-                          {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                        </span>
-                        <span className="text-gold-600 text-sm font-semibold group-hover:translate-x-1 transition-transform inline-block">
-                          Read →
-                        </span>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          )}
+          <BlogFilter posts={posts} />
         </div>
       </section>
 
