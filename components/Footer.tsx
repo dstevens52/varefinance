@@ -45,10 +45,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-sm text-white/90 uppercase tracking-widest mb-4">More Articles</h3>
             <ul className="space-y-2">
-              <li><Link href="/blog/va-funding-fee-2026" className="text-white/60 hover:text-white text-sm transition-colors">VA Funding Fee Guide</Link></li>
-              <li><Link href="/blog/when-to-refinance-va-loan" className="text-white/60 hover:text-white text-sm transition-colors">When to Refinance Your VA Loan</Link></li>
-              <li><Link href="/blog/va-certificate-of-eligibility-how-to-get" className="text-white/60 hover:text-white text-sm transition-colors">How to Get Your VA COE</Link></li>
-              <li><Link href="/blog/how-to-spot-predatory-va-refinance-offers" className="text-white/60 hover:text-white text-sm transition-colors">Spotting Predatory Offers</Link></li>
+              <li><Link href="/blog/va-funding-fee-2026" className="text-white/60 hover:text-white text-sm transition-colors">VA Funding Fee 2026</Link></li>
+              <li><Link href="/blog/when-to-refinance-va-loan" className="text-white/60 hover:text-white text-sm transition-colors">Is Now a Good Time to Refinance?</Link></li>
+              <li><Link href="/blog/va-refinance-document-checklist" className="text-white/60 hover:text-white text-sm transition-colors">VA Refinance Document Checklist</Link></li>
+              <li><Link href="/blog/va-certificate-of-eligibility-how-to-get" className="text-white/60 hover:text-white text-sm transition-colors">How to Get Your COE Fast</Link></li>
             </ul>
           </div>
         </div>

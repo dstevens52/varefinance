@@ -164,6 +164,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Calculators */}
+      <section className="bg-navy-50 py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-3">Free VA Loan Tools</h2>
+          <p className="text-gray-500 text-center mb-10">Run the numbers before you talk to a lender.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                href: '/calculator',
+                icon: '📊',
+                title: 'VA Refinance Decision Tool',
+                description: 'Should you refinance? Enter your numbers to see monthly savings, break-even timeline, and whether you meet VA requirements.',
+                cta: 'Run the Calculator',
+              },
+              {
+                href: '/calculator/funding-fee',
+                icon: '💰',
+                title: 'VA Funding Fee Calculator',
+                description: 'Calculate your exact funding fee by loan type, usage history, and down payment. See what it costs to finance it.',
+                cta: 'Calculate Your Fee',
+              },
+              {
+                href: '/calculator/irrrl-eligibility',
+                icon: '📅',
+                title: 'IRRRL Eligibility Date Calculator',
+                description: 'Find out exactly when you\'re eligible to refinance based on the VA\'s 210-day and 6-payment seasoning rules.',
+                cta: 'Check Eligibility',
+              },
+            ].map(tool => (
+              <div key={tool.href} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col hover:shadow-md hover:border-navy-200 transition-all">
+                <div className="text-3xl mb-3">{tool.icon}</div>
+                <h3 className="font-bold text-navy-900 text-lg mb-2">{tool.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{tool.description}</p>
+                <Link
+                  href={tool.href}
+                  className="block text-center bg-navy-800 hover:bg-navy-900 text-white font-semibold py-2.5 rounded-md transition-colors text-sm"
+                >
+                  {tool.cta} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trust signals */}
       <section className="bg-navy-900 py-16 px-4">
         <div className="max-w-5xl mx-auto">
@@ -202,19 +247,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Educational CTA */}
-      <section className="bg-navy-800 py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Start with the Basics</h2>
-          <p className="text-white/70 text-lg mb-8">
-            Not sure which program applies to you? Our guides explain everything in plain language — from eligibility rules to real savings examples.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/blog" className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
-              Browse All Articles
+      {/* Popular Articles */}
+      <section className="bg-white py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h2 className="text-3xl font-bold text-navy-900 mb-1">Popular Articles</h2>
+              <p className="text-gray-500">Start here to understand your options.</p>
+            </div>
+            <Link href="/blog" className="text-navy-700 hover:text-navy-900 font-semibold text-sm border border-navy-200 hover:border-navy-400 px-4 py-2 rounded-md transition-colors hidden sm:inline-block">
+              All Articles →
             </Link>
-            <Link href="/va-irrrl" className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-7 py-3.5 rounded-md transition-colors">
-              Learn About VA IRRRL
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                href: '/blog/when-to-refinance-va-loan',
+                category: 'VA Loans',
+                title: 'Is Now a Good Time to Refinance Your VA Loan?',
+                description: 'The decision framework that actually matters — not rate commentary.',
+              },
+              {
+                href: '/blog/va-funding-fee-2026',
+                category: 'VA Loans',
+                title: 'VA Funding Fee 2026: Complete Breakdown',
+                description: 'Rates for every loan type, exemption rules, and dollar examples.',
+              },
+              {
+                href: '/blog/how-to-spot-predatory-va-refinance-offers',
+                category: 'VA Loans',
+                title: 'How to Spot Predatory VA Refinance Offers',
+                description: 'Red flags and tactics veterans need to recognize before they sign.',
+              },
+              {
+                href: '/blog/va-irrrl-net-tangible-benefit',
+                category: 'VA IRRRL',
+                title: 'VA IRRRL Net Tangible Benefit Explained',
+                description: 'What the NTB requirement means and how the 36-month rule works.',
+              },
+            ].map(article => (
+              <Link key={article.href} href={article.href} className="group block">
+                <article className="h-full bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-navy-200 transition-all">
+                  <div className="bg-navy-800 h-2" />
+                  <div className="p-5 flex flex-col h-full">
+                    <span className="text-xs font-semibold text-gold-600 bg-gold-100 px-2.5 py-1 rounded-full self-start mb-3">
+                      {article.category}
+                    </span>
+                    <h3 className="font-bold text-navy-900 text-base leading-snug mb-2 group-hover:text-navy-700 transition-colors flex-1">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-500 text-xs leading-relaxed mb-4">{article.description}</p>
+                    <span className="text-gold-600 text-sm font-semibold group-hover:translate-x-1 transition-transform inline-block">
+                      Read →
+                    </span>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8 sm:hidden">
+            <Link href="/blog" className="text-navy-700 hover:text-navy-900 font-semibold text-sm border border-navy-200 px-4 py-2 rounded-md transition-colors">
+              Browse All Articles →
             </Link>
           </div>
         </div>
