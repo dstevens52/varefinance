@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-5">{post.title}</h1>
           <p className="text-white/70 text-lg leading-relaxed">{post.description}</p>
           <p className="text-white/40 text-sm mt-4">
-            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · {post.author}
+            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · VARefinance Editorial
           </p>
         </div>
       </section>
