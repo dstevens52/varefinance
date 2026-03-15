@@ -41,6 +41,22 @@ export default function CalculatorPage() {
         </div>
       </section>
 
+      {/* More VA Calculators */}
+      <section className="bg-navy-900 py-8 px-4 border-t border-navy-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-sm font-semibold text-white/50 uppercase tracking-widest mb-4">More VA Calculators</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/calculator/funding-fee" className="flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl p-5 transition-colors group">
+              <div className="text-2xl">💰</div>
+              <div>
+                <h3 className="font-semibold text-white text-sm group-hover:text-gold-400 transition-colors mb-1">VA Funding Fee Calculator</h3>
+                <p className="text-white/50 text-xs leading-relaxed">Calculate your exact funding fee by loan type, usage history, and down payment. See the cost if you finance it.</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Context links */}
       <section className="bg-white py-12 px-4 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
