@@ -64,7 +64,7 @@ export default function HomePage() {
       {/* Hero + Market Snapshot Callout — single shared navy background */}
       <div className="bg-navy-900">
         {/* Hero */}
-        <section className="text-white py-24 px-4">
+        <section className="text-white pt-24 pb-8 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/30 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-6">
               <span>🎖️</span> For Veterans, Active Duty &amp; Military Families
@@ -105,7 +105,7 @@ export default function HomePage() {
         {/* Market Snapshot Callout */}
         <div className="px-4 pt-2 pb-12">
           <div
-            className="max-w-[900px] mx-auto rounded-[10px] p-7"
+            className="max-w-[900px] mx-auto rounded-[10px] p-7 bg-white"
             style={{ border: '1px solid rgba(201, 168, 76, 0.35)' }}
           >
             <div className="flex flex-col gap-4 min-[700px]:flex-row min-[700px]:items-center min-[700px]:justify-between">
@@ -118,18 +118,18 @@ export default function HomePage() {
                   />
                   <span
                     className="text-xs font-semibold uppercase tracking-widest"
-                    style={{ color: '#C9A84C' }}
+                    style={{ color: '#85714A' }}
                   >
                     Updated March 2026
                   </span>
                 </div>
                 <p
-                  className="text-white font-semibold leading-snug mb-2"
-                  style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: '18px' }}
+                  className="font-semibold leading-snug mb-2"
+                  style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: '18px', color: '#1B3A5C' }}
                 >
                   Rates just dipped below 6% — should you refinance your VA loan?
                 </p>
-                <p className="text-white/60 leading-relaxed" style={{ fontSize: '13px' }}>
+                <p className="leading-relaxed" style={{ fontSize: '13px', color: '#5c5c5c' }}>
                   See the latest market data, what veterans are saving, and whether a VA IRRRL could lower your payment.
                 </p>
               </div>
