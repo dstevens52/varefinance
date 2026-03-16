@@ -104,7 +104,7 @@ export default function VACashOutPage() {
               For example: if your home is worth $400,000 and you owe $250,000 on your current mortgage, you have $150,000 in equity. With a VA Cash-Out Refinance at 90% LTV, you could borrow up to $360,000 — paying off your current $250,000 balance and receiving the remaining $110,000 in cash.
             </p>
             <p>
-              Unlike the VA IRRRL (which is limited to veterans who already have VA loans), the VA Cash-Out Refinance is open to any eligible veteran or service member, regardless of their current loan type. This makes it a powerful tool for veterans who purchased their homes with conventional loans and now want to convert to a VA loan while accessing their equity.
+              Unlike the VA IRRRL (which is limited to veterans who already have VA loans), the VA Cash-Out Refinance is open to any eligible veteran or service member, regardless of their current loan type. This makes it a powerful tool for veterans who purchased their homes with conventional loans and now want to convert to a VA loan while accessing their equity. For current market context on refinance activity and savings, see our <a href="/data/va-refinance-snapshot">VA refinance market snapshot</a>.
             </p>
           </div>
         </div>

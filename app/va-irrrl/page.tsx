@@ -124,7 +124,7 @@ export default function VAIRRRLPage() {
               Unlike conventional refinances that require full income documentation, credit checks, and home appraisals, the VA IRRRL strips away most of that complexity. The VA has already guaranteed your current loan and has a record of your service — the IRRRL simply updates the terms of that existing guarantee to give you a lower rate.
             </p>
             <p>
-              The program is offered through private VA-approved lenders, with the VA backing up to 25% of the loan. Because of this government backing, lenders can offer lower rates with reduced risk, which is why VA rates are consistently among the lowest available to homeowners.
+              The program is offered through private VA-approved lenders, with the VA backing up to 25% of the loan. Because of this government backing, lenders can offer lower rates with reduced risk, which is why VA rates are consistently among the lowest available to homeowners. See our <a href="/data/va-refinance-snapshot">VA refinance market snapshot</a> for current data on how many veterans are eligible and what they&apos;re saving.
             </p>
           </div>
         </div>
