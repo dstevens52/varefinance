@@ -27,39 +27,12 @@ const socialButtons = [
 
 export default function SnapshotShareBar({ label }: { label: string }) {
   const [copied, setCopied] = useState(false)
-  const [downloading, setDownloading] = useState(false)
+  const [showSaveHint, setShowSaveHint] = useState(false)
 
   function handleCopy() {
     navigator.clipboard.writeText(PAGE_URL)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-  }
-
-  async function handleDownload() {
-    console.log('[SnapshotShareBar] Download Image clicked')
-    const el = document.getElementById('infographic-card')
-    if (!el) {
-      console.error('[SnapshotShareBar] #infographic-card not found in DOM')
-      return
-    }
-    setDownloading(true)
-    try {
-      const { default: html2canvas } = await import('html2canvas')
-      const canvas = await html2canvas(el, { scale: 2 })
-      canvas.toBlob(blob => {
-        if (!blob) return
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = 'va-refinance-snapshot-march-2026.png'
-        document.body.appendChild(a)
-        a.click()
-        document.body.removeChild(a)
-        setTimeout(() => URL.revokeObjectURL(url), 100)
-      }, 'image/png')
-    } finally {
-      setDownloading(false)
-    }
   }
 
   return (
@@ -82,13 +55,29 @@ export default function SnapshotShareBar({ label }: { label: string }) {
       >
         {copied ? 'Copied!' : 'Copy Link'}
       </button>
-      <button
-        onClick={handleDownload}
-        disabled={downloading}
-        className="inline-flex items-center px-3 py-1.5 text-xs font-medium border border-gray-300 rounded-md text-gray-700 hover:border-navy-700 hover:text-navy-700 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {downloading ? 'Generating...' : 'Download Image'}
-      </button>
+      <div className="relative">
+        <button
+          onClick={() => setShowSaveHint(h => !h)}
+          className="inline-flex items-center px-3 py-1.5 text-xs font-medium border border-gray-300 rounded-md text-gray-700 hover:border-navy-700 hover:text-navy-700 transition-colors whitespace-nowrap"
+        >
+          Download Image
+        </button>
+        {showSaveHint && (
+          <div className="absolute left-0 top-full mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-10 text-xs text-gray-600 leading-relaxed">
+            <button
+              onClick={() => setShowSaveHint(false)}
+              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-sm leading-none"
+              aria-label="Dismiss"
+            >
+              ×
+            </button>
+            <strong className="block text-gray-800 mb-1">To save this infographic:</strong>
+            Right-click (or long-press on mobile) anywhere on the infographic above and select{' '}
+            <em>&ldquo;Save image as&hellip;&rdquo;</em> — or take a screenshot using your
+            device&apos;s built-in tool.
+          </div>
+        )}
+      </div>
     </div>
   )
 }
