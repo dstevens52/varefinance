@@ -51,8 +51,9 @@ export default function VARefinanceSnapshotPage() {
 
         {/* ── Infographic card ── */}
         <div
-          id="infographic"
-          className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-6"
+          id="infographic-card"
+          className="bg-white rounded-2xl shadow-sm overflow-hidden mb-6"
+          style={{ border: '1px solid #e8e4dc' }}
         >
           {/* a. Card eyebrow */}
           <div className="px-6 sm:px-8 pt-8">

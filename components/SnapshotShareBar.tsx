@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import html2canvas from 'html2canvas'
 
 const SHARE_TEXT =
   '5.4 million homeowners could save by refinancing right now. Veterans with rates above 6.25% should take a look.'
@@ -27,6 +28,7 @@ const socialButtons = [
 
 export default function SnapshotShareBar({ label }: { label: string }) {
   const [copied, setCopied] = useState(false)
+  const [downloading, setDownloading] = useState(false)
 
   function handleCopy() {
     navigator.clipboard.writeText(PAGE_URL)
@@ -34,8 +36,24 @@ export default function SnapshotShareBar({ label }: { label: string }) {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  function handleDownload() {
-    alert('Coming soon — static image download')
+  async function handleDownload() {
+    const el = document.getElementById('infographic-card')
+    if (!el) return
+    setDownloading(true)
+    try {
+      const canvas = await html2canvas(el, { scale: 2 })
+      canvas.toBlob(blob => {
+        if (!blob) return
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'va-refinance-snapshot-march-2026.png'
+        a.click()
+        URL.revokeObjectURL(url)
+      }, 'image/png')
+    } finally {
+      setDownloading(false)
+    }
   }
 
   return (
@@ -60,9 +78,10 @@ export default function SnapshotShareBar({ label }: { label: string }) {
       </button>
       <button
         onClick={handleDownload}
-        className="inline-flex items-center px-3 py-1.5 text-xs font-medium border border-gray-300 rounded-md text-gray-700 hover:border-navy-700 hover:text-navy-700 transition-colors whitespace-nowrap"
+        disabled={downloading}
+        className="inline-flex items-center px-3 py-1.5 text-xs font-medium border border-gray-300 rounded-md text-gray-700 hover:border-navy-700 hover:text-navy-700 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Download Image
+        {downloading ? 'Generating...' : 'Download Image'}
       </button>
     </div>
   )
