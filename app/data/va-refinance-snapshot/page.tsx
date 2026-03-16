@@ -252,7 +252,7 @@ export default function VARefinanceSnapshotPage() {
           <div className="px-6 sm:px-8 pb-6 flex items-center gap-5 text-xs text-gray-500">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: '#d3d1c7' }} />
-              <span>Pre-2025 (estimated)</span>
+              <span>2022–2024</span>
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: '#1b3a6b' }} />
