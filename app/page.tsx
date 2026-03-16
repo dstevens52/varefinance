@@ -61,44 +61,93 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[webSiteSchema, breadcrumbSchema([{ name: 'Home', path: '/' }])]} />
-      {/* Hero */}
-      <section className="bg-navy-900 text-white py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/30 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-6">
-            <span>🎖️</span> For Veterans, Active Duty &amp; Military Families
+      {/* Hero + Market Snapshot Callout — single shared navy background */}
+      <div className="bg-navy-900">
+        {/* Hero */}
+        <section className="text-white py-24 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/30 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-6">
+              <span>🎖️</span> For Veterans, Active Duty &amp; Military Families
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              You served your country.
+              <br />
+              <span className="text-gold-400">Now let your VA loan serve you.</span>
+            </h1>
+            <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+              Millions of veterans are leaving money on the table by not refinancing their VA loans. We break down the eligibility rules, funding fees, and net tangible benefit requirements so you can evaluate any refinance offer with confidence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Link
+                href="/va-irrrl"
+                className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
+              >
+                Explore VA Streamline Refinance
+              </Link>
+              <Link
+                href="/va-cash-out"
+                className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
+              >
+                Explore VA Cash-Out Refinance
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <Link
+                href="/calculator"
+                className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-6 py-2.5 rounded-md transition-colors text-base"
+              >
+                Try Our VA Refinance Calculator
+              </Link>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            You served your country.
-            <br />
-            <span className="text-gold-400">Now let your VA loan serve you.</span>
-          </h1>
-          <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Millions of veterans are leaving money on the table by not refinancing their VA loans. We break down the eligibility rules, funding fees, and net tangible benefit requirements so you can evaluate any refinance offer with confidence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-            <Link
-              href="/va-irrrl"
-              className="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
-            >
-              Explore VA Streamline Refinance
-            </Link>
-            <Link
-              href="/va-cash-out"
-              className="border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg"
-            >
-              Explore VA Cash-Out Refinance
-            </Link>
-          </div>
-          <div className="flex justify-center">
-            <Link
-              href="/calculator"
-              className="border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-6 py-2.5 rounded-md transition-colors text-base"
-            >
-              Try Our VA Refinance Calculator
-            </Link>
+        </section>
+
+        {/* Market Snapshot Callout */}
+        <div className="px-4 pt-2 pb-12">
+          <div
+            className="max-w-[900px] mx-auto rounded-[10px] p-7"
+            style={{ border: '1px solid rgba(201, 168, 76, 0.35)' }}
+          >
+            <div className="flex flex-col gap-4 min-[700px]:flex-row min-[700px]:items-center min-[700px]:justify-between">
+              {/* Left: eyebrow + headline + subtitle */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0"
+                    style={{ backgroundColor: '#C9A84C' }}
+                  />
+                  <span
+                    className="text-xs font-semibold uppercase tracking-widest"
+                    style={{ color: '#C9A84C' }}
+                  >
+                    Updated March 2026
+                  </span>
+                </div>
+                <p
+                  className="text-white font-semibold leading-snug mb-2"
+                  style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: '18px' }}
+                >
+                  Rates just dipped below 6% — should you refinance your VA loan?
+                </p>
+                <p className="text-white/60 leading-relaxed" style={{ fontSize: '13px' }}>
+                  See the latest market data, what veterans are saving, and whether a VA IRRRL could lower your payment.
+                </p>
+              </div>
+
+              {/* Right: CTA button */}
+              <div className="flex-shrink-0">
+                <Link
+                  href="/data/va-refinance-snapshot"
+                  className="inline-block font-semibold rounded-lg transition-colors whitespace-nowrap text-sm bg-[#C9A84C] hover:bg-[#d4b35a] text-[#0F2440]"
+                  style={{ padding: '10px 20px' }}
+                >
+                  View market snapshot →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Calculators */}
       <section className="bg-navy-50 py-16 px-4">
