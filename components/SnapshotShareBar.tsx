@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import html2canvas from 'html2canvas'
 
 const SHARE_TEXT =
   '5.4 million homeowners could save by refinancing right now. Veterans with rates above 6.25% should take a look.'
@@ -37,10 +36,15 @@ export default function SnapshotShareBar({ label }: { label: string }) {
   }
 
   async function handleDownload() {
+    console.log('[SnapshotShareBar] Download Image clicked')
     const el = document.getElementById('infographic-card')
-    if (!el) return
+    if (!el) {
+      console.error('[SnapshotShareBar] #infographic-card not found in DOM')
+      return
+    }
     setDownloading(true)
     try {
+      const { default: html2canvas } = await import('html2canvas')
       const canvas = await html2canvas(el, { scale: 2 })
       canvas.toBlob(blob => {
         if (!blob) return
@@ -48,8 +52,10 @@ export default function SnapshotShareBar({ label }: { label: string }) {
         const a = document.createElement('a')
         a.href = url
         a.download = 'va-refinance-snapshot-march-2026.png'
+        document.body.appendChild(a)
         a.click()
-        URL.revokeObjectURL(url)
+        document.body.removeChild(a)
+        setTimeout(() => URL.revokeObjectURL(url), 100)
       }, 'image/png')
     } finally {
       setDownloading(false)
