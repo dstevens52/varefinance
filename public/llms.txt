@@ -11,6 +11,10 @@ The two primary VA refinance programs covered are the VA IRRRL (Interest Rate Re
 - [VA Home Purchase](https://www.varefinance.com/va-purchase): Overview of using a VA loan to purchase a home — zero down payment, no PMI, eligibility requirements.
 - [VA Refinance Decision Tool](https://www.varefinance.com/calculator): Interactive calculator that helps veterans compare IRRRL vs Cash-Out refinancing, estimates savings, checks net tangible benefit requirements, and calculates funding fees.
 
+## Data & Tools
+
+- [VA Refinance Market Snapshot — March 2026](https://www.varefinance.com/data/va-refinance-snapshot): Monthly VA refinance market snapshot — refinance-eligible population, savings scenarios, and refinance activity trends sourced from ICE Mortgage Monitor data.
+
 ## Blog Articles
 
 - [What Is a VA IRRRL and How Can It Save You Money?](https://www.varefinance.com/blog/what-is-va-irrrl): Explains how the VA Interest Rate Reduction Refinance Loan works, who qualifies, and realistic savings estimates.
