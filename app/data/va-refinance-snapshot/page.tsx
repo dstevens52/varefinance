@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import SnapshotShareBar from '@/components/SnapshotShareBar'
 import SnapshotBarChart from '@/components/SnapshotBarChart'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'VA Refinance Market Snapshot — March 2026 | VARefinance.com',
@@ -18,6 +20,11 @@ export const metadata: Metadata = {
 export default function VARefinanceSnapshotPage() {
   return (
     <div className="bg-white min-h-screen">
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Data & Tools', path: '/data' },
+        { name: 'Market Snapshot', path: '/data/va-refinance-snapshot' },
+      ])} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Breadcrumb */}
