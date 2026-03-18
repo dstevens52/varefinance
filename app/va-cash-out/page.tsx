@@ -17,11 +17,13 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'How much cash can I get with a VA Cash-Out Refinance?',
-    answer: 'The VA technically allows up to 100% LTV, but in practice most veterans should plan around a 90% LTV ceiling. Following Ginnie Mae\'s 2019 pooling restrictions, VA cash-out loans above 90% LTV face significant pricing penalties — loan-level price adjustments of roughly 1.75–2% — that most lenders pass through to the borrower or avoid entirely by capping their programs at 90%. The VA\'s nominal 100% allowance rarely translates into a loan veterans can realistically obtain. At 90% LTV, you can still access substantially more equity than conventional cash-out refinances, which typically cap at 80% LTV.',
+    answer: 'The VA technically allows up to 100% LTV, but in practice most veterans should plan around a 90% LTV ceiling. Lender risk policies and secondary-market investor preferences mean most lenders cap at 90% LTV in practice. The VA\'s nominal 100% allowance rarely translates into a loan veterans can realistically obtain. At 90% LTV, you can still access substantially more equity than conventional cash-out refinances, which typically cap at 80% LTV. Read our full guide on VA cash-out equity limits.',
+    answerNode: (<>The VA technically allows up to 100% LTV, but in practice most veterans should plan around a 90% LTV ceiling. Lender risk policies and secondary-market investor preferences mean most lenders cap at 90% LTV in practice. The VA&apos;s nominal 100% allowance rarely translates into a loan veterans can realistically obtain. At 90% LTV, you can still access substantially more equity than conventional cash-out refinances, which typically cap at 80% LTV. Read our full guide on <a href="/blog/va-cash-out-equity-limits" className="text-navy-700 underline hover:text-gold-600">VA cash-out equity limits</a>.</>),
   },
   {
     question: 'Do I need a current VA loan to use a VA Cash-Out Refinance?',
-    answer: 'No — this is a key difference from the VA IRRRL. The VA Cash-Out Refinance is available to eligible veterans and service members regardless of what type of loan they currently have. If you have a conventional, FHA, or USDA loan and want to switch to a VA loan while taking out cash, you can do so through the Cash-Out Refinance program.',
+    answer: 'No — this is a key difference from the VA IRRRL. The VA Cash-Out Refinance is available to eligible veterans and service members regardless of what type of loan they currently have. If you have a conventional, FHA, or USDA loan and want to switch to a VA loan while taking out cash, you can do so through the Cash-Out Refinance program. Read our guide on refinancing a conventional loan to VA.',
+    answerNode: (<>No — this is a key difference from the VA IRRRL. The VA Cash-Out Refinance is available to eligible veterans and service members regardless of what type of loan they currently have. If you have a conventional, FHA, or USDA loan and want to switch to a VA loan while taking out cash, you can do so through the Cash-Out Refinance program. Read our guide on <a href="/blog/refinance-conventional-to-va-loan" className="text-navy-700 underline hover:text-gold-600">refinancing a conventional loan to VA</a>.</>),
   },
   {
     question: 'What can I use the cash for?',
@@ -33,8 +35,8 @@ const faqs = [
   },
   {
     question: 'What is the funding fee for a VA Cash-Out Refinance?',
-    answer: 'The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars.',
-    answerNode: (<>The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars. Use our <a href="/calculator/funding-fee" className="text-navy-700 underline hover:text-gold-600">VA Funding Fee Calculator</a> to see your exact fee amount.</>),
+    answer: 'The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars. Read our full 2026 funding fee guide.',
+    answerNode: (<>The VA funding fee for a cash-out refinance is higher than the IRRRL: 2.15% for first-time use and 3.3% for subsequent use. The fee can be rolled into the loan balance. Veterans with a service-connected disability rating of 10% or higher are typically exempt from the funding fee entirely — this is a significant benefit that can save thousands of dollars. Read our <a href="/blog/va-funding-fee-2026" className="text-navy-700 underline hover:text-gold-600">full 2026 funding fee guide</a> or use our <a href="/calculator/funding-fee" className="text-navy-700 underline hover:text-gold-600">VA Funding Fee Calculator</a> to see your exact fee amount.</>),
   },
   {
     question: 'How does a VA Cash-Out Refinance affect my credit?',
@@ -47,6 +49,14 @@ const faqs = [
   {
     question: 'Can I do a VA Cash-Out Refinance if I have already used a VA loan before?',
     answer: 'Yes. VA entitlement can be restored after a VA loan is paid off or refinanced. Even if you currently have a VA loan, you can use the VA Cash-Out Refinance as long as you meet the eligibility and lender requirements. If you have used VA entitlement on a previous home that you still own, your remaining entitlement may still be sufficient, or a lender can work with you on bonus entitlement.',
+  },
+  {
+    question: 'Is the cash I receive from a VA Cash-Out taxable?',
+    answer: 'No. The funds you receive from a cash-out refinance are loan proceeds, not income, so they are not taxable. However, you are taking on additional debt secured by your home.',
+  },
+  {
+    question: 'Can I do a VA Cash-Out Refinance on an investment property?',
+    answer: 'No. The VA Cash-Out Refinance is only available for your primary residence. You must live in the home or certify your intent to occupy it.',
   },
 ]
 

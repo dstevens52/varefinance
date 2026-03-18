@@ -26,7 +26,7 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
           </button>
           <div
             className="border-t border-gray-100 overflow-hidden transition-all duration-200"
-            style={open === i ? { maxHeight: '1000px', visibility: 'visible' } : { maxHeight: 0, visibility: 'hidden' }}
+            style={open === i ? { maxHeight: '1000px' } : { maxHeight: 0 }}
             aria-hidden={open !== i}
           >
             <div className="px-6 pb-5 pt-4 text-gray-600 text-sm sm:text-base leading-relaxed">

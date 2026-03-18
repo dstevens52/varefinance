@@ -49,7 +49,8 @@ const faqs = [
   },
   {
     question: 'Do I need an appraisal for a VA IRRRL?',
-    answer: 'In most cases, no. One of the biggest advantages of the VA IRRRL is that a full home appraisal is not required. This saves time, money, and eliminates the risk of your home appraising below the loan amount. Your lender may still order an automated valuation, but a physical appraisal is generally not needed.',
+    answer: 'In most cases, no. One of the biggest advantages of the VA IRRRL is that a full home appraisal is not required. This saves time, money, and eliminates the risk of your home appraising below the loan amount. Your lender may still order an automated valuation, but a physical appraisal is generally not needed. See our full documentation guide for details on what paperwork is required.',
+    answerNode: (<>In most cases, no. One of the biggest advantages of the VA IRRRL is that a full home appraisal is not required. This saves time, money, and eliminates the risk of your home appraising below the loan amount. Your lender may still order an automated valuation, but a physical appraisal is generally not needed. See our <a href="/blog/va-irrrl-documents-needed" className="text-navy-700 underline hover:text-gold-600">full documentation guide</a> for details on what paperwork is required.</>),
   },
   {
     question: 'Can I roll my closing costs into the loan?',
@@ -57,15 +58,18 @@ const faqs = [
   },
   {
     question: 'How much of an interest rate reduction do I need?',
-    answer: 'The VA requires that the new loan provide a "net tangible benefit." For a fixed-rate to fixed-rate IRRRL, this typically means at least a 0.5% reduction in your interest rate. For an ARM to fixed-rate IRRRL, the rule is more flexible. Your lender must document this benefit at closing.',
+    answer: 'The VA requires that the new loan provide a "net tangible benefit." For a fixed-rate to fixed-rate IRRRL, this typically means at least a 0.5% reduction in your interest rate. For an ARM to fixed-rate IRRRL, the rule is more flexible. Your lender must document this benefit at closing. Read our guide on the net tangible benefit test for a full breakdown.',
+    answerNode: (<>The VA requires that the new loan provide a &ldquo;net tangible benefit.&rdquo; For a fixed-rate to fixed-rate IRRRL, this typically means at least a 0.5% reduction in your interest rate. For an ARM to fixed-rate IRRRL, the rule is more flexible. Your lender must document this benefit at closing. Read our guide on the <a href="/blog/va-irrrl-net-tangible-benefit" className="text-navy-700 underline hover:text-gold-600">net tangible benefit test</a> for a full breakdown.</>),
   },
   {
     question: 'Can I use a VA IRRRL on a rental property or investment property?',
-    answer: 'The VA IRRRL can be used on a property that was previously your primary residence, even if you no longer live there. You must certify that you previously occupied the home as your primary residence. This is a significant advantage for veterans who have moved to a new duty station but still own their previous home.',
+    answer: 'The VA IRRRL can be used on a property that was previously your primary residence, even if you no longer live there. You must certify that you previously occupied the home as your primary residence. This is a significant advantage for veterans who have moved to a new duty station but still own their previous home. Read our full guide on using the VA IRRRL on a rental property.',
+    answerNode: (<>The VA IRRRL can be used on a property that was previously your primary residence, even if you no longer live there. You must certify that you previously occupied the home as your primary residence. This is a significant advantage for veterans who have moved to a new duty station but still own their previous home. Read our full guide on <a href="/blog/va-irrrl-rental-property" className="text-navy-700 underline hover:text-gold-600">using the VA IRRRL on a rental property</a>.</>),
   },
   {
     question: 'How soon after my original VA loan can I do a VA IRRRL?',
-    answer: 'You must have made at least 6 consecutive monthly payments on your current VA loan, and the first payment must have been made at least 210 days ago. You must also be current on your mortgage with no 30-day late payments in the past 12 months.',
+    answer: 'You must have made at least 6 consecutive monthly payments on your current VA loan, and the first payment must have been made at least 210 days ago. You must also be current on your mortgage with no 30-day late payments in the past 12 months. Read our full guide on VA loan refinance waiting periods.',
+    answerNode: (<>You must have made at least 6 consecutive monthly payments on your current VA loan, and the first payment must have been made at least 210 days ago. You must also be current on your mortgage with no 30-day late payments in the past 12 months. Read our full guide on <a href="/blog/va-loan-refinance-waiting-period" className="text-navy-700 underline hover:text-gold-600">VA loan refinance waiting periods</a>.</>),
   },
   {
     question: 'What is the VA funding fee for an IRRRL?',
@@ -75,6 +79,15 @@ const faqs = [
   {
     question: 'Can I get cash back at closing on a VA IRRRL?',
     answer: 'No. A VA IRRRL is designed only to lower your rate or shorten your loan term — not to provide cash back. If you want to access your equity, a VA Cash-Out Refinance is the appropriate loan product.',
+  },
+  {
+    question: 'What documents do I need for a VA IRRRL?',
+    answer: 'The IRRRL requires less documentation than almost any other refinance. In most cases you will not need income verification, an appraisal, or a new Certificate of Eligibility. Your lender may add their own requirements. Read our full documentation guide.',
+    answerNode: (<>The IRRRL requires less documentation than almost any other refinance. In most cases you will not need income verification, an appraisal, or a new Certificate of Eligibility. Your lender may add their own requirements. <a href="/blog/va-irrrl-documents-needed" className="text-navy-700 underline hover:text-gold-600">Read our full documentation guide</a>.</>),
+  },
+  {
+    question: 'How many times can I use the VA IRRRL?',
+    answer: 'There is no limit. You can use the IRRRL as many times as you want, as long as you meet the 210-day seasoning requirement and the net tangible benefit test each time.',
   },
 ]
 
