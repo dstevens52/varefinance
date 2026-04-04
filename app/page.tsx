@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Shield, BarChart3, DollarSign, CalendarCheck, ShieldCheck, BookOpen, CheckCircle, Lightbulb } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import { webSiteSchema, breadcrumbSchema } from '@/lib/schema'
 
@@ -36,22 +37,22 @@ const loanCards = [
 
 const trustPoints = [
   {
-    icon: '🎖️',
+    Icon: ShieldCheck,
     title: 'Built for Veterans',
     body: 'Every piece of content on this site is written specifically for veterans, active duty service members, and their families navigating VA loan options.',
   },
   {
-    icon: '📖',
+    Icon: BookOpen,
     title: 'Education First',
     body: 'We believe informed veterans make better decisions. Our goal is to explain your options clearly — with no pressure and no sales tactics.',
   },
   {
-    icon: '✅',
+    Icon: CheckCircle,
     title: 'Accurate & Up to Date',
     body: 'Our guides reflect current VA rules and program requirements so you can rely on the information when evaluating your options.',
   },
   {
-    icon: '⚡',
+    Icon: Lightbulb,
     title: 'Clear & Straightforward',
     body: 'No jargon, no fine print. We explain VA loan programs in plain language so you can understand your options without needing a mortgage degree.',
   },
@@ -67,7 +68,7 @@ export default function HomePage() {
         <section className="text-white pt-24 pb-8 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/30 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-6">
-              <span>🎖️</span> For Veterans, Active Duty &amp; Military Families
+              <Shield className="w-4 h-4 shrink-0" /> For Veterans, Active Duty &amp; Military Families
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               You served your country.
@@ -158,28 +159,28 @@ export default function HomePage() {
             {[
               {
                 href: '/calculator',
-                icon: '📊',
+                Icon: BarChart3,
                 title: 'VA Refinance Decision Tool',
                 description: 'Should you refinance? Enter your numbers to see monthly savings, break-even timeline, and whether you meet VA requirements.',
                 cta: 'Run the Calculator',
               },
               {
                 href: '/calculator/funding-fee',
-                icon: '💰',
+                Icon: DollarSign,
                 title: 'VA Funding Fee Calculator',
                 description: 'Calculate your exact funding fee by loan type, usage history, and down payment. See what it costs to finance it.',
                 cta: 'Calculate Your Fee',
               },
               {
                 href: '/calculator/irrrl-eligibility',
-                icon: '📅',
+                Icon: CalendarCheck,
                 title: 'IRRRL Eligibility Date Calculator',
                 description: 'Find out exactly when you\'re eligible to refinance based on the VA\'s 210-day and 6-payment seasoning rules.',
                 cta: 'Check Eligibility',
               },
             ].map(tool => (
               <div key={tool.href} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col hover:shadow-md hover:border-navy-200 transition-all">
-                <div className="text-3xl mb-3">{tool.icon}</div>
+                <div className="mb-4"><tool.Icon className="w-8 h-8 text-navy-700" /></div>
                 <h3 className="font-bold text-navy-900 text-lg mb-2">{tool.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{tool.description}</p>
                 <Link
@@ -252,7 +253,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustPoints.map(tp => (
               <div key={tp.title} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <div className="text-3xl mb-3">{tp.icon}</div>
+                <div className="mb-4"><tp.Icon className="w-7 h-7 text-gold-400" /></div>
                 <h3 className="font-semibold text-white mb-2">{tp.title}</h3>
                 <p className="text-white/60 text-sm leading-relaxed">{tp.body}</p>
               </div>
