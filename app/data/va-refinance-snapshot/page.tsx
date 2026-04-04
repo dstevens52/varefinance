@@ -39,7 +39,7 @@ export default function VARefinanceSnapshotPage() {
         {/* Page header */}
         <header className="py-8">
           <p className="text-sm text-gray-400 mb-3">
-            Last updated March 9, 2026 · Next update expected early April
+            Last updated March 9, 2026 · Next update coming soon
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
             VA refinance market snapshot

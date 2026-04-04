@@ -121,17 +121,17 @@ export default function HomePage() {
                     className="text-xs font-semibold uppercase tracking-widest"
                     style={{ color: '#85714A' }}
                   >
-                    Updated March 2026
+                    Updated April 2026
                   </span>
                 </div>
                 <p
                   className="font-semibold leading-snug mb-2"
                   style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: '18px', color: '#1B3A5C' }}
                 >
-                  Rates just dipped below 6% — should you refinance your VA loan?
+                  Should you refinance your VA loan right now?
                 </p>
                 <p className="leading-relaxed" style={{ fontSize: '13px', color: '#5c5c5c' }}>
-                  See the latest market data, what veterans are saving, and whether a VA IRRRL could lower your payment.
+                  See the latest market data on who's refinancing, what veterans are saving, and whether the math works at today's rates.
                 </p>
               </div>
 
