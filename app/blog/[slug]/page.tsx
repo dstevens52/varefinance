@@ -37,7 +37,48 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
 
   const allPosts = getAllPosts()
-  const related = allPosts.filter(p => p.slug !== slug).slice(0, 3)
+
+  // Per-post related article slugs — topically matched, not chronological
+  const relatedSlugMap: Record<string, string[]> = {
+    // IRRRL posts
+    'what-is-va-irrrl': ['va-irrrl-closing-costs', 'va-irrrl-net-tangible-benefit', 'va-irrrl-documents-needed'],
+    'va-irrrl-closing-costs': ['what-is-va-irrrl', 'va-irrrl-net-tangible-benefit', 'when-to-refinance-va-loan'],
+    'va-irrrl-net-tangible-benefit': ['what-is-va-irrrl', 'va-irrrl-closing-costs', 'when-to-refinance-va-loan'],
+    'va-irrrl-documents-needed': ['va-irrrl-closing-costs', 'va-refinance-document-checklist', 'va-irrrl-net-tangible-benefit'],
+    'va-irrrl-vs-conventional-refinance': ['what-is-va-irrrl', 'va-irrrl-closing-costs', 'refinance-va-loan-to-conventional'],
+    'va-loan-refinance-waiting-period': ['what-is-va-irrrl', 'va-irrrl-net-tangible-benefit', 'va-irrrl-closing-costs'],
+    'va-irrrl-rental-property': ['what-is-va-irrrl', 'va-irrrl-closing-costs', 'va-irrrl-documents-needed'],
+    'how-many-times-va-irrrl': ['va-irrrl-net-tangible-benefit', 'what-is-va-irrrl', 'when-to-refinance-va-loan'],
+    'va-irrrl-arm-to-fixed-rate': ['what-is-va-irrrl', 'va-irrrl-net-tangible-benefit', 'va-irrrl-closing-costs'],
+    'va-irrrl-second-mortgage-subordination': ['what-is-va-irrrl', 'va-irrrl-closing-costs', 'va-irrrl-documents-needed'],
+    // Cash-out posts
+    'va-cash-out-tap-into-equity': ['va-cash-out-vs-heloc', 'va-cash-out-equity-limits', 'va-cash-out-refinance-credit-score'],
+    'type-1-vs-type-2-va-cash-out-refinance': ['va-cash-out-tap-into-equity', 'va-cash-out-equity-limits', 'va-cash-out-refinance-credit-score'],
+    'va-cash-out-vs-heloc': ['va-cash-out-tap-into-equity', 'va-cash-out-equity-limits', 'va-cash-out-refinance-debt-consolidation'],
+    'va-cash-out-refinance-credit-score': ['va-cash-out-equity-limits', 'va-cash-out-tap-into-equity', 'va-cash-out-refinance-debt-consolidation'],
+    'va-cash-out-refinance-paid-off-home': ['va-cash-out-equity-limits', 'va-cash-out-tap-into-equity', 'va-cash-out-refinance-credit-score'],
+    'va-cash-out-refinance-debt-consolidation': ['va-cash-out-tap-into-equity', 'va-cash-out-vs-heloc', 'va-cash-out-equity-limits'],
+    'va-cash-out-equity-limits': ['va-cash-out-tap-into-equity', 'va-cash-out-refinance-credit-score', 'type-1-vs-type-2-va-cash-out-refinance'],
+    'refinance-conventional-to-va-loan': ['va-cash-out-tap-into-equity', 'va-cash-out-equity-limits', 'va-cash-out-refinance-credit-score'],
+    // General / costs / timing
+    'va-funding-fee-2026': ['va-irrrl-closing-costs', 'va-cash-out-equity-limits', 'when-to-refinance-va-loan'],
+    'when-to-refinance-va-loan': ['va-irrrl-net-tangible-benefit', 'va-mortgage-rates-explained', 'va-irrrl-closing-costs'],
+    'va-mortgage-rates-explained': ['when-to-refinance-va-loan', 'va-irrrl-net-tangible-benefit', 'va-irrrl-closing-costs'],
+    'va-refinance-escrow-refund': ['va-irrrl-closing-costs', 'va-refinance-document-checklist', 'va-funding-fee-2026'],
+    'va-refinance-document-checklist': ['va-irrrl-documents-needed', 'va-refinance-escrow-refund', 'va-funding-fee-2026'],
+    'refinance-va-loan-to-conventional': ['va-irrrl-vs-conventional-refinance', 'va-cash-out-tap-into-equity', 'va-funding-fee-2026'],
+    // Eligibility / benefits
+    'va-certificate-of-eligibility-how-to-get': ['va-loan-entitlement-restoration', 'va-loan-benefits-after-separation', '5-things-veterans-should-know'],
+    'va-loan-entitlement-restoration': ['va-certificate-of-eligibility-how-to-get', 'va-loan-benefits-after-separation', 'va-funding-fee-2026'],
+    'va-loan-benefits-after-separation': ['va-certificate-of-eligibility-how-to-get', 'va-loan-entitlement-restoration', '5-things-veterans-should-know'],
+    '5-things-veterans-should-know': ['va-funding-fee-2026', 'va-irrrl-net-tangible-benefit', 'va-certificate-of-eligibility-how-to-get'],
+    'how-to-spot-predatory-va-refinance-offers': ['5-things-veterans-should-know', 'va-irrrl-net-tangible-benefit', 'how-many-times-va-irrrl'],
+  }
+
+  const relatedSlugs = relatedSlugMap[slug] ?? []
+  const related = relatedSlugs.length > 0
+    ? relatedSlugs.map(s => allPosts.find(p => p.slug === s)).filter(Boolean) as typeof allPosts
+    : allPosts.filter(p => p.slug !== slug).slice(0, 3)
 
   return (
     <>
@@ -77,19 +118,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
 
-            {/* Bottom educational CTA */}
-            <div className="mt-12 p-6 bg-navy-50 border border-navy-100 rounded-2xl">
-              <h3 className="font-bold text-navy-900 text-lg mb-2">Want to learn more about your VA loan options?</h3>
-              <p className="text-gray-600 text-sm mb-4">Explore our in-depth guides on VA refinancing programs to understand your eligibility and potential savings.</p>
-              <div className="flex flex-wrap gap-3">
-                <Link href="/va-irrrl" className="inline-block bg-navy-800 hover:bg-navy-900 text-white font-semibold px-5 py-2 rounded-md transition-colors text-sm">
-                  VA Streamline Refinance
-                </Link>
-                <Link href="/va-cash-out" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-5 py-2 rounded-md transition-colors text-sm">
-                  VA Cash-Out Refinance
-                </Link>
-              </div>
-            </div>
           </article>
 
           {/* Sidebar */}
@@ -144,18 +172,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* Bottom educational CTA banner */}
-      <section className="bg-navy-800 py-14 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Keep Learning About VA Loan Benefits</h2>
-          <p className="text-white/70 mb-7">
-            VA refinancing programs have helped millions of veterans lower their costs. Browse our full library of guides and educational articles.
-          </p>
-          <Link href="/blog" className="inline-block bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3 rounded-md transition-colors">
-            Browse All Articles
-          </Link>
-        </div>
-      </section>
     </>
   )
 }
