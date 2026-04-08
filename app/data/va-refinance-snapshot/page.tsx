@@ -6,13 +6,13 @@ import JsonLd from '@/components/JsonLd'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'VA Refinance Market Snapshot — March 2026 | VARefinance.com',
+  title: 'VA Refinance Market Snapshot — April 2026 | VARefinance.com',
   description:
-    '5.4 million homeowners could save by refinancing. See the latest market data, what veterans are saving, and whether a VA IRRRL could lower your payment.',
+    'The refinance window narrowed as rates rebounded, but veterans with rates above 6.50% still have real opportunity. See the latest ICE Mortgage Monitor data.',
   openGraph: {
-    title: '5.4 Million Homeowners Could Save by Refinancing — Are You One of Them?',
+    title: 'The VA Refinance Window Narrowed — But Veterans With High Rates Still Have Opportunity',
     description:
-      'Rates dipped below 6% for the first time in 3 years. See what veterans are saving and whether a VA IRRRL makes sense for you.',
+      'Rates rebounded ~40 bps from their late-February lows. Veterans carrying 7%+ rates from 2023–2024 should still evaluate a VA IRRRL. See the latest data.',
     type: 'article',
   },
 }
@@ -39,7 +39,7 @@ export default function VARefinanceSnapshotPage() {
         {/* Page header */}
         <header className="py-8">
           <p className="text-sm text-gray-400 mb-3">
-            Last updated March 9, 2026 · Next update coming soon
+            Last updated April 8, 2026 · Next update expected early May
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
             VA refinance market snapshot
@@ -65,25 +65,26 @@ export default function VARefinanceSnapshotPage() {
           {/* a. Card eyebrow */}
           <div className="px-6 sm:px-8 pt-8">
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">
-              March 2026 — ICE Mortgage Monitor data
+              April 2026 — ICE Mortgage Monitor data
             </p>
           </div>
 
           {/* b. Headline */}
           <div className="px-6 sm:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-bold leading-tight mb-4">
-              <span className="text-gray-900">5.4 million homeowners could save by refinancing.</span>
+              <span className="text-gray-900">The refinance window narrowed —</span>
               <br />
-              <span className="text-navy-800">Are you one of them?</span>
+              <span className="text-navy-800">but veterans with high rates still have real opportunity</span>
             </h2>
           </div>
 
           {/* c. Subhead */}
           <div className="px-6 sm:px-8 pb-7">
             <p className="text-gray-600 leading-relaxed text-base max-w-3xl">
-              When 30-year rates dipped below 6% in late February 2026, the refinance-eligible
-              population hit a 4-year high. Veterans with rates above 6.25% should evaluate whether
-              a VA IRRRL could reduce their monthly payment.
+              Rates bottomed near 5.95% in late February before rebounding roughly 40 basis points
+              to around 6.35%. The refinance-eligible population has fallen about 60% from its recent
+              peak — but veterans who locked in at 6.50% or above should still evaluate whether a VA
+              IRRRL makes sense at today's rates.
             </p>
           </div>
 
@@ -95,20 +96,22 @@ export default function VARefinanceSnapshotPage() {
                 <div className="text-xs font-semibold uppercase tracking-widest text-white/55 mb-3">
                   Refinance-eligible borrowers
                 </div>
-                <div className="text-5xl font-bold tracking-tight mb-3">5.4M</div>
+                <div className="text-5xl font-bold tracking-tight mb-3">~2.2M</div>
                 <div className="text-sm text-white/65 leading-relaxed">
-                  Highest since early 2022. Borrowers who could cut their rate by 0.75% or more.
+                  Down roughly 60% from the 5.4M peak earlier this year. Higher rates have reversed
+                  multi-year highs reached in late 2025 and early 2026.
                 </div>
               </div>
 
               {/* Card 2 — muted gold */}
               <div className="rounded-xl p-6 text-white" style={{ backgroundColor: '#85714A' }}>
                 <div className="text-xs font-semibold uppercase tracking-widest text-white/55 mb-3">
-                  Q4 2025 refinances closed
+                  Rate rebound
                 </div>
-                <div className="text-5xl font-bold tracking-tight mb-3">565K</div>
+                <div className="text-5xl font-bold tracking-tight mb-3">~40 bps</div>
                 <div className="text-sm text-white/65 leading-relaxed">
-                  Up 50% year-over-year. Highest quarterly volume in 3.5 years.
+                  30-year rates fell below 6% in late February for the first time since early 2023,
+                  but have since risen roughly 40 basis points to around 6.35% as of late March.
                 </div>
               </div>
             </div>
@@ -133,54 +136,12 @@ export default function VARefinanceSnapshotPage() {
             <div className="rounded-xl border border-gray-200 overflow-hidden bg-gray-50">
               <div className="p-5 sm:p-6">
                 <div className="flex flex-wrap items-center gap-2 mb-5">
-                  <span className="font-semibold text-navy-900">Bought in 2023–2024 at 6.50%</span>
+                  <span className="font-semibold text-navy-900">Bought in 2023–2024 at 7.00%</span>
                   <span
                     className="px-2.5 py-0.5 rounded-full text-xs font-semibold"
                     style={{ backgroundColor: '#E1F5EE', color: '#085041' }}
                   >
-                    0.75% rate drop
-                  </span>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center gap-5">
-                  <div className="flex-1 text-center sm:text-left">
-                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">Current rate</div>
-                    <div className="text-3xl font-bold text-navy-900">6.50%</div>
-                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,212/mo</div>
-                  </div>
-                  <div className="text-2xl text-gray-300 select-none flex-shrink-0">→</div>
-                  <div className="flex-1 text-center sm:text-right">
-                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">New rate</div>
-                    <div className="text-3xl font-bold" style={{ color: '#0F6E56' }}>5.75%</div>
-                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,043/mo</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="px-5 sm:px-6 py-3 flex flex-wrap gap-x-4 gap-y-1 items-center"
-                style={{ backgroundColor: '#E1F5EE' }}
-              >
-                <span className="text-sm font-semibold" style={{ color: '#085041' }}>
-                  $169/mo estimated monthly savings
-                </span>
-                <span className="text-gray-300 hidden sm:inline" aria-hidden="true">|</span>
-                <span className="text-sm font-semibold" style={{ color: '#085041' }}>
-                  $2,034/yr estimated annual savings
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* h. Scenario 2 */}
-          <div className="px-6 sm:px-8 pb-8">
-            <div className="rounded-xl border border-gray-200 overflow-hidden bg-gray-50">
-              <div className="p-5 sm:p-6">
-                <div className="flex flex-wrap items-center gap-2 mb-5">
-                  <span className="font-semibold text-navy-900">Bought at the peak at 7.00%</span>
-                  <span
-                    className="px-2.5 py-0.5 rounded-full text-xs font-semibold"
-                    style={{ backgroundColor: '#E1F5EE', color: '#085041' }}
-                  >
-                    1.25% rate drop
+                    1.00% rate drop
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center gap-5">
@@ -192,8 +153,8 @@ export default function VARefinanceSnapshotPage() {
                   <div className="text-2xl text-gray-300 select-none flex-shrink-0">→</div>
                   <div className="flex-1 text-center sm:text-right">
                     <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">New rate</div>
-                    <div className="text-3xl font-bold" style={{ color: '#0F6E56' }}>5.75%</div>
-                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,043/mo</div>
+                    <div className="text-3xl font-bold" style={{ color: '#0F6E56' }}>6.00%</div>
+                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,098/mo</div>
                   </div>
                 </div>
               </div>
@@ -202,11 +163,53 @@ export default function VARefinanceSnapshotPage() {
                 style={{ backgroundColor: '#E1F5EE' }}
               >
                 <span className="text-sm font-semibold" style={{ color: '#085041' }}>
-                  $286/mo estimated monthly savings
+                  $231/mo estimated monthly savings
                 </span>
                 <span className="text-gray-300 hidden sm:inline" aria-hidden="true">|</span>
                 <span className="text-sm font-semibold" style={{ color: '#085041' }}>
-                  $3,430/yr estimated annual savings
+                  $2,772/yr estimated annual savings
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* h. Scenario 2 */}
+          <div className="px-6 sm:px-8 pb-8">
+            <div className="rounded-xl border border-gray-200 overflow-hidden bg-gray-50">
+              <div className="p-5 sm:p-6">
+                <div className="flex flex-wrap items-center gap-2 mb-5">
+                  <span className="font-semibold text-navy-900">Bought at the peak at 7.50%</span>
+                  <span
+                    className="px-2.5 py-0.5 rounded-full text-xs font-semibold"
+                    style={{ backgroundColor: '#E1F5EE', color: '#085041' }}
+                  >
+                    1.50% rate drop
+                  </span>
+                </div>
+                <div className="flex flex-col sm:flex-row items-center gap-5">
+                  <div className="flex-1 text-center sm:text-left">
+                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">Current rate</div>
+                    <div className="text-3xl font-bold text-navy-900">7.50%</div>
+                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,447/mo</div>
+                  </div>
+                  <div className="text-2xl text-gray-300 select-none flex-shrink-0">→</div>
+                  <div className="flex-1 text-center sm:text-right">
+                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-1">New rate</div>
+                    <div className="text-3xl font-bold" style={{ color: '#0F6E56' }}>6.00%</div>
+                    <div className="text-sm text-gray-500 mt-1">P&amp;I $2,098/mo</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="px-5 sm:px-6 py-3 flex flex-wrap gap-x-4 gap-y-1 items-center"
+                style={{ backgroundColor: '#E1F5EE' }}
+              >
+                <span className="text-sm font-semibold" style={{ color: '#085041' }}>
+                  $349/mo estimated monthly savings
+                </span>
+                <span className="text-gray-300 hidden sm:inline" aria-hidden="true">|</span>
+                <span className="text-sm font-semibold" style={{ color: '#085041' }}>
+                  $4,188/yr estimated annual savings
                 </span>
               </div>
             </div>
@@ -230,12 +233,19 @@ export default function VARefinanceSnapshotPage() {
                     VA borrowers are leading the refinance wave
                   </h3>
                   <p className="text-white/75 text-sm leading-relaxed">
-                    FHA and VA loans had the strongest servicer retention of any loan type in Q4
-                    2025 at 39%. An estimated 95% of recent rate-and-term refinances involved loans
-                    originated in 2023–2025, with the average refinancer cutting their rate by nearly
-                    a full percentage point and saving about $200/month. The VA IRRRL (streamline
-                    refinance) requires a minimum 0.5% rate reduction for fixed-to-fixed refinances
-                    and must pass a 36-month recoupment test.
+                    The refinance window has narrowed since early 2026 as rates rebounded from their
+                    late-February lows, but the opportunity hasn't disappeared for veterans with higher
+                    rates. Rates fell below 6% briefly in late February — the first time since early
+                    2023 — pushing the refinance-eligible population to 5.4 million, its highest level
+                    since 2022. Since then, 30-year rates have risen roughly 40 basis points to around
+                    6.35%, and the number of borrowers in the money for a refinance has fallen about
+                    60%. ICE data suggests the lock-in effect will ease gradually rather than in a
+                    single wave, as many homeowners — especially Baby Boomers — remain reluctant to
+                    move even as rates improve. Prepayment activity is still up nearly 80% year over
+                    year, driven by refinances triggered by lower rates in January reaching closing.
+                    For veterans carrying rates of 7% or above from 2023–2024 purchases, the math on
+                    a VA IRRRL still works at current rates — the 0.5% funding fee and minimal closing
+                    costs mean the break-even period remains short on a meaningful rate reduction.
                   </p>
                 </div>
               </div>
@@ -253,6 +263,13 @@ export default function VARefinanceSnapshotPage() {
           {/* k. Bar chart */}
           <div className="px-6 sm:px-8 pb-2">
             <SnapshotBarChart />
+          </div>
+
+          {/* Q1 2026 note */}
+          <div className="px-6 sm:px-8 pb-4">
+            <p className="text-xs text-gray-400 italic">
+              Q1 2026 data is not yet available — it will be included in the next update (expected early May 2026).
+            </p>
           </div>
 
           {/* Chart legend */}
@@ -292,7 +309,7 @@ export default function VARefinanceSnapshotPage() {
           <div className="border-t border-gray-100">
             <div className="px-6 sm:px-8 py-5 flex flex-col sm:flex-row justify-between gap-4">
               <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-                Market data: ICE Mortgage Monitor (March 2026 and December 2025), ICE McDash
+                Market data: ICE Mortgage Monitor (April 2026 and March 2026), ICE McDash
                 loan-level data. Loan scenarios are illustrative calculations, not quotes.
               </p>
               <div className="sm:text-right flex-shrink-0">
@@ -327,16 +344,17 @@ export default function VARefinanceSnapshotPage() {
                 ICE Mortgage Monitor
               </a>
               , which tracks loan-level performance across the majority of the U.S. mortgage market.
-              The primary sources are the March 2026 and December 2025 ICE Mortgage Monitor reports.
+              The primary sources are the April 2026 ICE Mortgage Monitor report (released April 6,
+              2026) and March 2026 ICE Mortgage Monitor.
             </p>
             <p>
               The refinance scenarios use a $350,000 loan balance, which is near the national average
-              VA loan amount of $361,000 (FY2023, U.S. Department of Veterans Affairs). The 5.75%
-              target rate reflects current VA IRRRL pricing as of mid-March 2026. Rates change daily.
+              VA loan amount of $361,000 (FY2023, U.S. Department of Veterans Affairs). The 6.00%
+              target rate reflects VA IRRRL pricing as of early April 2026. Rates change daily.
             </p>
             <p>
               We update this page when new ICE Mortgage Monitor reports are released, typically within
-              a few days of publication. The next report is expected in early April 2026. Want to know
+              a few days of publication. The next report is expected in early May 2026. Want to know
               if a refinance makes sense for your specific situation? Use our{' '}
               <Link href="/calculator">VA Refinance Decision Tool</Link> or explore our guide to the{' '}
               <Link href="/va-irrrl">VA IRRRL</Link>.

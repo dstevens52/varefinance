@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 const SHARE_TEXT =
-  '5.4 million homeowners could save by refinancing right now. Veterans with rates above 6.25% should take a look.'
+  'The VA refinance window narrowed — but veterans with rates above 6.50% can still save. See the latest data.'
 const PAGE_URL = 'https://varefinance.com/data/va-refinance-snapshot'
 
 const socialButtons = [

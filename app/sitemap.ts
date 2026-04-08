@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/calculator/irrrl-eligibility`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
 { url: `${base}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${base}/data/va-refinance-snapshot`, lastModified: new Date('2026-03-09'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/data/va-refinance-snapshot`, lastModified: new Date('2026-04-08'), changeFrequency: 'monthly', priority: 0.8 },
   ]
 
   const blogPages: MetadataRoute.Sitemap = posts.map(post => ({
