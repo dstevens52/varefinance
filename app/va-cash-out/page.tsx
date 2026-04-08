@@ -51,12 +51,13 @@ const faqs = [
     answer: 'Yes. VA entitlement can be restored after a VA loan is paid off or refinanced. Even if you currently have a VA loan, you can use the VA Cash-Out Refinance as long as you meet the eligibility and lender requirements. If you have used VA entitlement on a previous home that you still own, your remaining entitlement may still be sufficient, or a lender can work with you on bonus entitlement.',
   },
   {
-    question: 'Is the cash I receive from a VA Cash-Out taxable?',
-    answer: 'No. The funds you receive from a cash-out refinance are loan proceeds, not income, so they are not taxable. However, you are taking on additional debt secured by your home.',
+    question: 'Is cash from a VA Cash-Out Refinance taxable?',
+    answer: 'No. Cash-out refinance proceeds are loan funds, not income, so they are not subject to income tax. You are borrowing against your own equity, not receiving a payment. However, the interest on the portion of the loan used for purposes other than home improvements may not be tax-deductible — consult a tax professional for guidance specific to your situation.',
   },
   {
     question: 'Can I do a VA Cash-Out Refinance on an investment property?',
-    answer: 'No. The VA Cash-Out Refinance is only available for your primary residence. You must live in the home or certify your intent to occupy it.',
+    answer: 'No. The VA Cash-Out Refinance requires the property to be your primary residence. Unlike the VA IRRRL — which can be used on a former primary residence that is now rented out — the Cash-Out Refinance has a strict owner-occupancy requirement at the time of closing.',
+    answerNode: (<>No. The VA Cash-Out Refinance requires the property to be your primary residence. Unlike the <a href="/va-irrrl" className="text-navy-700 underline hover:text-gold-600">VA IRRRL</a> — which <a href="/blog/va-irrrl-rental-property" className="text-navy-700 underline hover:text-gold-600">can be used on a former primary residence that is now rented out</a> — the Cash-Out Refinance has a strict owner-occupancy requirement at the time of closing.</>),
   },
 ]
 
