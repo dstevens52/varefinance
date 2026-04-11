@@ -131,6 +131,10 @@ export default function VAPurchasePage() {
               </div>
             ))}
           </div>
+          <p className="text-gray-500 text-sm mt-6">
+            Your BAH is a major factor in VA loan qualification. Look up your exact housing allowance by ZIP code with the{' '}
+            <a href="https://milpaytools.com/calculators/bah" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">BAH Calculator</a>.
+          </p>
         </div>
       </section>
 
