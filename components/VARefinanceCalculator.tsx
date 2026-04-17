@@ -270,7 +270,7 @@ export default function VARefinanceCalculator() {
   const [yearsPaid, setYearsPaid] = useState('3')
   const [newRate, setNewRate] = useState('5.5')
   const [newTermYears, setNewTermYears] = useState('30')
-  const [closingCostsPct, setClosingCostsPct] = useState('1')
+  const [closingCostsDollars, setClosingCostsDollars] = useState('3000')
   const [fundingFeeExempt, setFundingFeeExempt] = useState(false)
   const [refiType, setRefiType] = useState('irrrl')
   const [isSubsequentUse, setIsSubsequentUse] = useState(false)
@@ -284,8 +284,6 @@ export default function VARefinanceCalculator() {
     const yPaid = parseFloat(yearsPaid) || 0
     const nRate = parseFloat(newRate) || 0
     const nTerm = parseInt(newTermYears) || 30
-    const ccPct = parseFloat(closingCostsPct) || 0
-
     if (bal <= 0 || cRate <= 0 || nRate <= 0) return null
 
     const remainingBalance = bal
@@ -302,7 +300,7 @@ export default function VARefinanceCalculator() {
       }
     }
     const fundingFee = (remainingBalance + cashOut) * (fundingFeePct / 100)
-    const closingCosts = remainingBalance * (ccPct / 100)
+    const closingCosts = parseFloat(closingCostsDollars) || 0
     const totalCosts = fundingFee + closingCosts
 
     const newLoanAmount = remainingBalance + totalCosts + cashOut
@@ -359,7 +357,7 @@ export default function VARefinanceCalculator() {
     yearsPaid,
     newRate,
     newTermYears,
-    closingCostsPct,
+    closingCostsDollars,
     fundingFeeExempt,
     refiType,
     isSubsequentUse,
@@ -649,10 +647,10 @@ export default function VARefinanceCalculator() {
             >
               <InputField
                 label="Estimated Closing Costs"
-                value={closingCostsPct}
-                onChange={setClosingCostsPct}
-                suffix="%"
-                helpText="Lender fees, title, etc. (typically 1–2%)"
+                value={closingCostsDollars}
+                onChange={setClosingCostsDollars}
+                prefix="$"
+                helpText="Lender fees, title insurance, etc. (typical range: $2,000–$5,000)"
               />
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 0' }}>
                 <div
@@ -776,7 +774,7 @@ export default function VARefinanceCalculator() {
                   bold: false,
                 },
                 {
-                  label: `Closing Costs (${closingCostsPct}%)`,
+                  label: 'Closing Costs',
                   value: formatCurrency(results.closingCosts),
                   bold: false,
                 },

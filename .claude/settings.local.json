@@ -6,7 +6,17 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git config:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(grep -h \"^date:\" /c/Users/danie/varefinance/content/blog/*.mdx | sort)",
+      "Bash(ls -la /c/Users/danie/varefinance/content/blog/*.mdx | wc -l)",
+      "Bash(grep -l \"date: \\\\\"2026-03-14\\\\\"\\\\|date: \\\\\"2026-03-15\\\\\"\" /c/Users/danie/varefinance/content/blog/*.mdx)",
+      "Bash(cd:*)",
+      "Bash(sed -i 's/^date: \"\"2026-03-11\"\"/date: \"\"2025-03-17\"\"/' content/blog/how-to-spot-predatory-va-refinance-offers.mdx)",
+      "Bash(sed -i 's/^date: \"\"2026-03-11\"\"/date: \"\"2025-04-03\"\"/' content/blog/va-irrrl-vs-conventional-refinance.mdx)",
+      "Bash(sed -i 's/^date: \"\"2026-03-11\"\"/date: \"\"2025-04-17\"\"/' content/blog/type-1-vs-type-2-va-cash-out-refinance.mdx)",
+      "Bash(sed -i 's/^date: \"\"2026-03-11\"\"/date: \"\"2025-05-05\"\"/' content/blog/va-loan-refinance-waiting-period.mdx)",
+      "Bash(sed -i 's/^date: \"\"2026-03-12\"\"/date: \"\"2025-05-28\"\"/' content/blog/va-mortgage-rates-explained.mdx)",
+      "Bash(xargs grep:*)"
     ]
   }
 }
