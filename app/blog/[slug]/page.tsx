@@ -118,6 +118,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
 
+            {/* Author bio */}
+            <div className="mt-10 pt-8 border-t border-gray-200">
+              <p className="text-xs font-semibold text-navy-900 uppercase tracking-wider mb-2">About the Author</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Dan Stevens grew up on Air Force bases around the world as the son of a 20-year Air Force veteran. He&apos;s been in the mortgage industry since 2003 and is an NMLS-licensed professional who specializes in VA lending, building educational tools for the military community he grew up in.
+              </p>
+            </div>
           </article>
 
           {/* Sidebar */}

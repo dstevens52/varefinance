@@ -53,13 +53,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="border-t border-white/10 mt-10 pt-6 space-y-3">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} VARefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link> · <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Use</Link> · <Link href="/disclosure" className="hover:text-white/60 transition-colors">Disclosure</Link> · <Link href="/editorial-policy" className="hover:text-white/60 transition-colors">Editorial Policy</Link>
+            Built by Dan Stevens — mortgage industry professional since 2003, NMLS-licensed VA lending specialist, and son of a 20-year Air Force veteran.
           </p>
-          <p className="text-white/30 text-xs text-center">
-            For informational purposes only. Not a lender or mortgage broker. VA loan eligibility determined by the Department of Veterans Affairs.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p className="text-white/40 text-xs">
+              © {new Date().getFullYear()} VARefinance.com · All rights reserved · <Link href="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link> · <Link href="/terms" className="hover:text-white/60 transition-colors">Terms of Use</Link> · <Link href="/disclosure" className="hover:text-white/60 transition-colors">Disclosure</Link> · <Link href="/editorial-policy" className="hover:text-white/60 transition-colors">Editorial Policy</Link>
+            </p>
+            <p className="text-white/30 text-xs text-center">
+              For informational purposes only. Not a lender or mortgage broker. VA loan eligibility determined by the Department of Veterans Affairs.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -46,6 +46,18 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* About the author */}
+      <section className="bg-navy-50 py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-navy-900 mb-6">About the Author</h2>
+          <div className="prose max-w-none">
+            <p>
+              Dan Stevens grew up on Air Force bases around the world as the son of a 20-year Air Force veteran. He&apos;s been in the mortgage industry since 2003 and is an NMLS-licensed professional who specializes in VA lending, building educational tools for the military community he grew up in.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="bg-navy-50 py-16 px-4">
         <div className="max-w-5xl mx-auto">
