@@ -74,6 +74,8 @@ export default function Header() {
               </button>
 
               {calcOpen && (
+                <>
+                <div className="absolute top-full left-0 right-0 h-1" />
                 <div className="absolute right-0 top-full mt-1 w-56 bg-navy-950 border border-navy-800 rounded-xl shadow-xl overflow-hidden">
                   {calculatorLinks.map(({ href, label }) => (
                     <Link
@@ -90,6 +92,7 @@ export default function Header() {
                     </Link>
                   ))}
                 </div>
+                </>
               )}
             </div>
           </nav>
